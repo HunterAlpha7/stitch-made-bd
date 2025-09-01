@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function NotFound() {
   return (
@@ -6,10 +7,13 @@ export default function NotFound() {
       <div className="max-w-2xl mx-auto px-4 text-center">
         {/* 404 SVG */}
         <div className="mb-8">
-          <img 
+          <Image 
             src="/404.svg" 
             alt="404 Error" 
             className="mx-auto max-w-md"
+            width={400}
+            height={300}
+            priority
           />
         </div>
         
@@ -17,10 +21,10 @@ export default function NotFound() {
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-deep-navy mb-4">Oops! Page Not Found</h1>
           <p className="text-xl text-gray-600 mb-4">
-            Looks like this page decided to take a sewing break! 🧵
+            Looks like this page decided to take a vacation! 🏝️
           </p>
           <p className="text-lg text-gray-500 mb-6">
-            Don't worry, we'll help you find your way back to the main fabric of our website!
+            Don&apos;t worry, we&apos;ll help you find your way back to the main fabric of our website!
           </p>
         </div>
 
@@ -48,7 +52,7 @@ export default function NotFound() {
             <span className="text-2xl">🪡</span>
             <div className="text-left">
               <p className="text-sm text-gray-600">
-                <strong>Industry Fun Fact:</strong> A single sewing machine can make up to 8,000 stitches per minute. That's faster than most people can type!
+                <strong>Industry Fun Fact:</strong> A single sewing machine can make up to 8,000 stitches per minute. That&apos;s faster than most people can type!
               </p>
             </div>
           </div>

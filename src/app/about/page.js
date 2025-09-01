@@ -23,7 +23,7 @@ export default function AboutPage() {
             high-quality apparel that meets international standards. Our commitment to excellence, 
             combined with our skilled workforce and state-of-the-art facilities, enables us to 
             produce garments that exceed customer expectations and contribute to the growth of 
-            Bangladesh's textile industry.
+            Bangladesh&apos;s textile industry.
           </p>
         </div>
       </section>
@@ -195,7 +195,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+    </section>
     </div>
   );
 }

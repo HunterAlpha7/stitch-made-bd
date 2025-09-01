@@ -7,7 +7,7 @@ export default function ContactPage() {
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
-            <p className="text-xl opacity-90">Let's discuss your garment manufacturing needs</p>
+            <p className="text-xl opacity-90">Let&apos;s discuss your garment manufacturing needs</p>
           </div>
         </div>
       </section>
@@ -184,7 +184,7 @@ export default function ContactPage() {
             </div>
             <div className="border border-gray-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-deep-navy mb-2">How long does production take?</h3>
-              <p className="text-gray-600">Production time typically ranges from 4-8 weeks depending on order size and complexity. We'll provide a detailed timeline during the quotation process.</p>
+              <p className="text-gray-600">Production time typically ranges from 4-8 weeks depending on order size and complexity. We&apos;ll provide a detailed timeline during the quotation process.</p>
             </div>
             <div className="border border-gray-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-deep-navy mb-2">Do you provide samples?</h3>
@@ -196,7 +196,7 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-      </section>
+    </section>
     </div>
   );
 }

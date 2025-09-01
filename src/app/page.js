@@ -254,13 +254,13 @@ export default function Home() {
         <div className="mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Start Your Project?</h2>
           <p className="text-xl opacity-90 mb-8">
-            Let's discuss your garment manufacturing requirements and how we can help bring your vision to life.
+            Let&apos;s discuss your garment manufacturing requirements and how we can help bring your vision to life.
           </p>
           <Link href="/contact" className="bg-teal text-white px-8 py-4 rounded-lg font-semibold hover:bg-teal/90 transition-colors inline-block">
             Get In Touch
           </Link>
         </div>
-      </section>
+    </section>
     </div>
   );
 }
