@@ -1,0 +1,16 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#1A3C4F"/>
+  <rect x="80" y="80" width="640" height="440" fill="#2596BE"/>
+  <rect x="120" y="120" width="110" height="160" fill="#6AB0CC"/>
+  <rect x="250" y="120" width="110" height="160" fill="#6AB0CC"/>
+  <rect x="380" y="120" width="110" height="160" fill="#6AB0CC"/>
+  <rect x="510" y="120" width="110" height="160" fill="#6AB0CC"/>
+  <rect x="640" y="120" width="110" height="160" fill="#6AB0CC"/>
+  <rect x="120" y="300" width="110" height="160" fill="#6AB0CC"/>
+  <rect x="250" y="300" width="110" height="160" fill="#6AB0CC"/>
+  <rect x="380" y="300" width="110" height="160" fill="#6AB0CC"/>
+  <rect x="510" y="300" width="110" height="160" fill="#6AB0CC"/>
+  <rect x="640" y="300" width="110" height="160" fill="#6AB0CC"/>
+  <polygon points="400,40 450,80 350,80" fill="#F28C6F"/>
+  <text x="400" y="60" text-anchor="middle" fill="white" font-size="24" font-family="Arial">Factory Image 5</text>
+</svg>

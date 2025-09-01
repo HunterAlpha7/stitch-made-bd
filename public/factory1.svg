@@ -1,0 +1,13 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#2596BE"/>
+  <rect x="100" y="200" width="600" height="300" fill="#1A3C4F"/>
+  <rect x="150" y="250" width="80" height="120" fill="#6AB0CC"/>
+  <rect x="250" y="250" width="80" height="120" fill="#6AB0CC"/>
+  <rect x="350" y="250" width="80" height="120" fill="#6AB0CC"/>
+  <rect x="450" y="250" width="80" height="120" fill="#6AB0CC"/>
+  <rect x="550" y="250" width="80" height="120" fill="#6AB0CC"/>
+  <rect x="650" y="250" width="80" height="120" fill="#6AB0CC"/>
+  <circle cx="200" cy="150" r="30" fill="#F28C6F"/>
+  <circle cx="600" cy="150" r="30" fill="#F28C6F"/>
+  <text x="400" y="100" text-anchor="middle" fill="white" font-size="24" font-family="Arial">Factory Image 1</text>
+</svg>

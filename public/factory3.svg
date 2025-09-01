@@ -1,0 +1,12 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#6AB0CC"/>
+  <rect x="75" y="100" width="650" height="400" fill="#1A3C4F"/>
+  <rect x="120" y="150" width="120" height="180" fill="#2596BE"/>
+  <rect x="260" y="150" width="120" height="180" fill="#2596BE"/>
+  <rect x="400" y="150" width="120" height="180" fill="#2596BE"/>
+  <rect x="540" y="150" width="120" height="180" fill="#2596BE"/>
+  <rect x="680" y="150" width="120" height="180" fill="#2596BE"/>
+  <circle cx="150" cy="80" r="25" fill="#F28C6F"/>
+  <circle cx="650" cy="80" r="25" fill="#F28C6F"/>
+  <text x="400" y="70" text-anchor="middle" fill="white" font-size="24" font-family="Arial">Factory Image 3</text>
+</svg>
