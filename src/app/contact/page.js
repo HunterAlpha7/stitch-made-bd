@@ -192,7 +192,7 @@ export default function ContactPage() {
             </div>
             <div className="border border-gray-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-deep-navy mb-2">What quality certifications do you have?</h3>
-              <p className="text-gray-600">We maintain various international quality certifications including ISO 9001, OEKO-TEX, and GOTS. We're also compliant with major brand standards.</p>
+              <p className="text-gray-600">We maintain various international quality certifications including ISO 9001, OEKO-TEX, and GOTS. We&apos;re also compliant with major brand standards.</p>
             </div>
           </div>
         </div>
