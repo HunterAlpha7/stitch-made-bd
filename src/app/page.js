@@ -7,11 +7,14 @@ import Link from 'next/link';
 function ImageCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [
-    '/factory1.svg',
-    '/factory2.svg', 
-    '/factory3.svg',
-    '/factory4.svg',
-    '/factory5.svg'
+    '/factory1.jpg',
+    '/factory2.jpg', 
+    '/factory3.jpg',
+    '/factory4.jpg',
+    '/factory5.jpg',
+    '/factory6.jpg',
+    '/factory7.jpg',
+    '/factory8.jpg'
   ];
 
   useEffect(() => {
@@ -138,7 +141,11 @@ function BuyerLogo({ logo, name, website }) {
       className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110"
     >
       <div className="w-24 h-24 mx-auto bg-light-gray rounded-lg flex items-center justify-center">
-        <span className="text-2xl font-bold text-deep-navy">{name}</span>
+        {logo ? (
+          <img src={logo} alt={name} className="max-w-full max-h-full object-contain" />
+        ) : (
+          <span className="text-2xl font-bold text-deep-navy">{name}</span>
+        )}
       </div>
       <p className="text-center mt-3 text-sm text-gray-600">{name}</p>
     </a>
@@ -224,27 +231,25 @@ export default function Home() {
       <section className="py-20 bg-light-gray">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">Our Buyers</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            <BuyerLogo 
-              logo="/nike-logo.png"
-              name="Nike"
-              website="https://www.nike.com"
-            />
-            <BuyerLogo 
-              logo="/adidas-logo.png"
-              name="Adidas"
-              website="https://www.adidas.com"
-            />
-            <BuyerLogo 
-              logo="/puma-logo.png"
-              name="Puma"
-              website="https://www.puma.com"
-            />
-            <BuyerLogo 
-              logo="/reebok-logo.png"
-              name="Reebok"
-              website="https://www.reebok.com"
-            />
+          <div className="flex justify-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
+              <BuyerLogo 
+                logo="/shinmen-logo.png"
+                name="Shinmen"
+                website="https://s-nmn.jp/corporate"
+              />
+              <BuyerLogo 
+                logo="/chori-logo.png"
+                name="Chori"
+                website="https://www.adidas.com"
+              />
+              <BuyerLogo 
+                logo="/sowa-logo.png"
+                name="Sowa"
+                website="https://www.puma.com"
+              />
+              
+            </div>
           </div>
         </div>
       </section>
@@ -252,9 +257,9 @@ export default function Home() {
       {/* Call to Action Section */}
       <section className="py-20 bg-deep-navy text-white">
         <div className="mx-auto max-w-4xl px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Start Your Project?</h2>
+          <h2 className="text-3xl font-bold mb-6">Partner with Us for Garment Excellence</h2>
           <p className="text-xl opacity-90 mb-8">
-            Let&apos;s discuss your garment manufacturing requirements and how we can help bring your vision to life.
+            Ready to elevate your brand with high-quality garment manufacturing? Contact us today to discuss your production needs.
           </p>
           <Link href="/contact" className="bg-teal text-white px-8 py-4 rounded-lg font-semibold hover:bg-teal/90 transition-colors inline-block">
             Get In Touch
