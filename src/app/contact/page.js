@@ -26,7 +26,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-deep-navy mb-1">Address</h4>
-                    <p className="text-gray-600">Plot 12, Industrial Area, Dhaka, Bangladesh</p>
+                    <p className="text-gray-600">Holding # 72/3, Block #3, Bahadurpur, Bhawal Mirzapur, Gazipur City, Gazipur - 1703</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -68,7 +68,7 @@ export default function ContactPage() {
                   <div className="text-center">
                     <div className="text-6xl mb-4">🗺️</div>
                     <p className="text-gray-600">Interactive Map Coming Soon</p>
-                    <p className="text-sm text-gray-500 mt-2">Plot 12, Industrial Area, Dhaka, Bangladesh</p>
+                    <p className="text-sm text-gray-500 mt-2">Holding # 72/3, Block #3, Bahadurpur, Bhawal Mirzapur, Gazipur City, Gazipur - 1703</p>
                   </div>
                 </div>
               </div>

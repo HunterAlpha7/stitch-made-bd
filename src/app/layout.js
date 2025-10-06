@@ -60,7 +60,7 @@ function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-8 flex items-center justify-between text-sm">
         <div>
           <div className="font-semibold">Stitch Made Factory</div>
-          <div className="opacity-80">Plot 12, Industrial Area, Dhaka, Bangladesh</div>
+          <div className="opacity-80">Holding # 72/3, Block #3, Bahadurpur, Bhawal Mirzapur, Gazipur City, Gazipur - 1703</div>
         </div>
         <div className="opacity-80">© {new Date().getFullYear()} Stitch Made BD</div>
       </div>
