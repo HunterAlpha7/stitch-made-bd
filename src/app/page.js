@@ -273,9 +273,9 @@ export default function Home() {
                 name="Shinmen"
               />
               <BuyerLogo
-                logo="/logos/takihyo-logo.png"
-                name="LOGO - 3"
-                website="https://www.takihyo.co.jp/en/"
+                logo="/logos/sowa-logo.png"
+                name="SOWA"
+                website="#"
               />
             </div>
           </div>

@@ -1,10 +1,20 @@
+import Image from "next/image";
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Image */}
-      <section className="relative h-96 bg-gradient-to-r from-teal to-deep-navy">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative z-10 h-full flex items-center justify-center">
+      <section className="relative h-96">
+        <Image
+          src="/factory_images/factory1.jpg"
+          alt="Stitch Made BD Factory"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          className="absolute inset-0 z-0"
+        />
+        <div className="absolute inset-0 bg-black/50 z-10"></div>
+        <div className="relative z-20 h-full flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-5xl font-bold mb-4">About Stitch Made BD</h1>
             <p className="text-xl opacity-90">Excellence in Garment Manufacturing</p>

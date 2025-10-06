@@ -3,6 +3,7 @@ import Link from "next/link";
 import "./globals.css";
 import ContactFab from "../components/ContactFab";
 import LanguageSwitcher from "../components/LanguageSwitcher";
+import MobileMenu from "../components/MobileMenu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,9 +46,10 @@ function Header() {
           <Link href="/sustainability" className="hover:opacity-90">Sustainability</Link>
           <Link href="/contact" className="hover:opacity-90">Contact</Link>
         </nav>
-        <div className="flex items-center gap-3">
+        <div className="md:flex items-center gap-3 hidden">
           <LanguageSwitcher />
         </div>
+        <MobileMenu />
       </div>
     </header>
   );

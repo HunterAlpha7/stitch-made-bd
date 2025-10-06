@@ -10,8 +10,8 @@ export default function ContactFab() {
   return (
     <div className="fixed bottom-6 right-6 flex flex-col items-end gap-3">
       <div className={`transition-all duration-300 ease-out flex flex-col items-end gap-3 ${open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}>
-        <ContactLink href="https://wa.me/15551234567" label="WhatsApp" bg="#25D366" icon={WhatsAppLogo} />
-        <ContactLink href="tel:+15551234567" label="Call" bg="#00C853" icon={PhoneLogo} />
+        <ContactLink href="https://wa.me/+880 1678 306 200" label="WhatsApp" bg="#25D366" icon={WhatsAppLogo} />
+        <ContactLink href="tel:+880 1678 306 200" label="Call" bg="#00C853" icon={PhoneLogo} />
       </div>
       <button
         aria-label={open ? "Close contact options" : "Open contact options"}
