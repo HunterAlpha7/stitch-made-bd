@@ -41,9 +41,8 @@ function Header() {
         <nav className="hidden md:flex gap-6 text-sm">
           <Link href="/" className="hover:opacity-90">Home</Link>
           <Link href="/about" className="hover:opacity-90">About</Link>
-          <Link href="/services" className="hover:opacity-90">Services</Link>
-          <Link href="/portfolio" className="hover:opacity-90">Portfolio</Link>
-          <Link href="/sustainability" className="hover:opacity-90">Sustainability</Link>
+          <Link href="/gallery" className="hover:opacity-90">Gallery</Link>
+          <Link href="/products" className="hover:opacity-90">Products</Link>
           <Link href="/contact" className="hover:opacity-90">Contact</Link>
         </nav>
         <div className="md:flex items-center gap-3 hidden">

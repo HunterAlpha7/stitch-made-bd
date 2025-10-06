@@ -68,14 +68,11 @@ export default function MobileMenu() {
           <Link href="/about" className="hover:opacity-90" onClick={toggleMenu}>
             About
           </Link>
-          <Link href="/services" className="hover:opacity-90" onClick={toggleMenu}>
-            Services
+          <Link href="/gallery" className="hover:opacity-90" onClick={toggleMenu}>
+            Gallery
           </Link>
-          <Link href="/portfolio" className="hover:opacity-90" onClick={toggleMenu}>
-            Portfolio
-          </Link>
-          <Link href="/sustainability" className="hover:opacity-90" onClick={toggleMenu}>
-            Sustainability
+          <Link href="/products" className="hover:opacity-90" onClick={toggleMenu}>
+            Products
           </Link>
           <Link href="/contact" className="hover:opacity-90" onClick={toggleMenu}>
             Contact
