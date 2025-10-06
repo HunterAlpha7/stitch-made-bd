@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import WhatsAppLogo from "../../public/whatsapp-logo.png";
-import PhoneLogo from "../../public/phone-logo.png";
-import MessengerLogo from "../../public/messenger-logo.png";
+import WhatsAppLogo from "../../public/logos/whatsapp-logo.png";
+import PhoneLogo from "../../public/logos/phone-logo.png";
+import MessengerLogo from "../../public/logos/messenger-logo.png";
 
 export default function ContactFab() {
   const [open, setOpen] = useState(false);
@@ -12,7 +12,6 @@ export default function ContactFab() {
       <div className={`transition-all duration-300 ease-out flex flex-col items-end gap-3 ${open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}>
         <ContactLink href="https://wa.me/15551234567" label="WhatsApp" bg="#25D366" icon={WhatsAppLogo} />
         <ContactLink href="tel:+15551234567" label="Call" bg="#00C853" icon={PhoneLogo} />
-        <ContactLink href="https://m.me/yourpage" label="Messenger" bg="#1877F2" icon={MessengerLogo} />
       </div>
       <button
         aria-label={open ? "Close contact options" : "Open contact options"}

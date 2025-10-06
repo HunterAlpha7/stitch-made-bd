@@ -7,14 +7,14 @@ import Link from 'next/link';
 function ImageCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [
-    '/factory1.jpg',
-    '/factory2.jpg', 
-    '/factory3.jpg',
-    '/factory4.jpg',
-    '/factory5.jpg',
-    '/factory6.jpg',
-    '/factory7.jpg',
-    '/factory8.jpg'
+    '/factory_images/factory1.jpg',
+    '/factory_images/factory2.jpg', 
+    '/factory_images/factory3.jpg',
+    '/factory_images/factory4.jpg',
+    '/factory_images/factory5.jpg',
+    '/factory_images/factory6.jpg',
+    '/factory_images/factory7.jpg',
+    '/factory_images/factory8.jpg'
   ];
 
   useEffect(() => {
@@ -138,7 +138,7 @@ function BuyerLogo({ logo, name, website }) {
       href={website} 
       target="_blank" 
       rel="noopener noreferrer"
-      className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110"
+      className="block p-6 bg-gray-200 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110"
     >
       <div className="w-24 h-24 mx-auto bg-light-gray rounded-lg flex items-center justify-center">
         {logo ? (
@@ -210,18 +210,18 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             <ProductCard 
               image="/product1.svg"
-              title="Casual Wear"
+              title="Work Wear"
               href="/products/casual"
             />
             <ProductCard 
-              image="/product2.svg"
-              title="Formal Wear"
-              href="/products/formal"
+              image="/ladies-bottom.png"
+              title="Ladies Bottom"
+              href="/products"
             />
             <ProductCard 
-              image="/product3.svg"
-              title="Sportswear"
-              href="/products/sports"
+              image="/mens-bottom.png"
+              title="Mens Bottom"
+              href="/products"
             />
           </div>
         </div>
@@ -231,24 +231,52 @@ export default function Home() {
       <section className="py-20 bg-light-gray">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">Our Buyers</h2>
-          <div className="flex justify-center">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
-              <BuyerLogo 
-                logo="/shinmen-logo.png"
-                name="Shinmen"
-                website="https://s-nmn.jp/corporate"
+          <div className="flex flex-col lg:flex-row justify-center items-stretch gap-8">
+            <div className="flex-1 grid grid-cols-1 md:grid-cols-5 gap-8">
+              <div className="md:col-span-5">
+                <BuyerLogo
+                  logo="/logos/chori-logo.svg"
+                  name="Chori"
+                  website="https://www.chori.co.jp/english/"
+                />
+              </div>
+              <BuyerLogo
+                logo="/logos/takihyo-logo.png"
+                name="Takihyo"
+                website="https://www.takihyo.co.jp/en/"
               />
-              <BuyerLogo 
-                logo="/chori-logo.png"
-                name="Chori"
-                website="https://www.adidas.com"
+              <BuyerLogo
+                logo="/tawaraya-logo.png"
+                name="Tawaraya"
+                website="#"
               />
-              <BuyerLogo 
-                logo="/sowa-logo.png"
-                name="Sowa"
-                website="https://www.puma.com"
+              <BuyerLogo
+                logo="/"
+                name="LOGO - 1 (C)"
+                website="#"
               />
               
+              <BuyerLogo
+                logo="/"
+                name="LOGO - 1 (D)"
+                website="#"
+              />
+              <BuyerLogo
+                logo="/"
+                name="LOGO - 1 (E)"
+                website="#"
+              />
+            </div>
+            <div className="flex-shrink-0 grid grid-cols-1 gap-8">
+              <BuyerLogo
+                logo="/logos/shinmen-logo.png"
+                name="Shinmen"
+              />
+              <BuyerLogo
+                logo="/logos/takihyo-logo.png"
+                name="LOGO - 3"
+                website="https://www.takihyo.co.jp/en/"
+              />
             </div>
           </div>
         </div>
