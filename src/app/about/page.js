@@ -27,12 +27,12 @@ export default function AboutPage() {
         <div className="mx-auto max-w-4xl px-4">
           <h2 className="text-3xl font-bold text-center text-deep-navy mb-8">Mission</h2>
           <p className="text-lg text-gray-700 text-center leading-relaxed max-w-3xl mx-auto">
-            At Stitch Made BD, our mission is to deliver exceptional garment manufacturing services 
-            while maintaining the highest standards of quality, sustainability, and ethical practices. 
-            We strive to be a trusted partner for global fashion brands, creating innovative and 
-            high-quality apparel that meets international standards. Our commitment to excellence, 
-            combined with our skilled workforce and state-of-the-art facilities, enables us to 
-            produce garments that exceed customer expectations and contribute to the growth of 
+            At Stitch Made BD, our mission is to deliver exceptional garment manufacturing services
+            while maintaining the highest standards of quality, sustainability, and ethical practices.
+            We strive to be a trusted partner for global fashion brands, creating innovative and
+            high-quality apparel that meets international standards. Our commitment to excellence,
+            combined with our skilled workforce and state-of-the-art facilities, enables us to
+            produce garments that exceed customer expectations and contribute to the growth of
             Bangladesh&apos;s textile industry.
           </p>
         </div>
@@ -150,6 +150,35 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">Equipment & Technology</h2>
+          {/* JINDEX X7 */}
+          <section className="py-20 bg-light-gray">
+            <div className="w-full px-4">
+              <h2 className="text-2xl font-bold text-center text-deep-navy mb-8">Jindex X7: High-Precision CNC Cutting Machine</h2>
+              <div className="flex flex-col gap-12">
+                <div>
+                  <Image
+                    src="/factory_images/Jindex_X7.jpg"
+                    alt="High-Precision Multi-Function CNC Cutting Machine"
+                    width={600}
+                    height={400}
+                    objectFit="contain"
+                    className="rounded-lg mx-auto block"
+                  />
+                </div>
+                <div>
+                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                    At Stitch Made BD, we pride ourselves on leveraging cutting-edge technology to achieve unparalleled precision and efficiency. Our flagship <span className="font-bold">Jindex X7</span> high-precision multi-function CNC cutting machine is a testament to this commitment. Engineered for mass production, it serves diverse sectors. This advanced system masterfully handles soft materials, consistently achieving a remarkable 7 cm cutting thickness after adsorption. It stands out with exceptional cutting speed, industry-leading accuracy, and intelligent, energy-efficient operations, underscoring our dedication to innovative and sustainable manufacturing.
+                  </p>
+                  <h3 className="text-xl font-semibold mb-3 text-deep-navy">Key Specifications:</h3>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Max cutting speed: 80 meters / minute</li>
+                    <li>• Cutting accuracy: +/- 1mm</li>
+                    <li>• Cutting style: Vibrating knife tool at 5000 rpm</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-light-gray p-6 rounded-lg">
               <div className="text-4xl mb-4">✂️</div>
@@ -182,7 +211,7 @@ export default function AboutPage() {
               </ul>
             </div>
           </div>
-          
+
           <div className="mt-12 bg-deep-navy text-white p-8 rounded-lg">
             <h3 className="text-2xl font-semibold mb-4 text-center">Production Capacity</h3>
             <div className="grid md:grid-cols-4 gap-6 text-center">
@@ -205,7 +234,8 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-    </section>
+      </section>
+
     </div>
   );
 }
