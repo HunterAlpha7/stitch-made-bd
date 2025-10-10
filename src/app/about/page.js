@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
+import { useLanguage } from '../../contexts/LanguageContext';
 
 export default function AboutPage() {
+  const { t } = useLanguage();
   return (
     <div className="min-h-screen">
       {/* Hero Section with Image */}
@@ -16,8 +20,8 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-black/50 z-10"></div>
         <div className="relative z-20 h-full flex items-center justify-center">
           <div className="text-center text-white">
-            <h1 className="text-5xl font-bold mb-4">About Stitch Made BD</h1>
-            <p className="text-xl opacity-90">Excellence in Garment Manufacturing</p>
+            <h1 className="text-5xl font-bold mb-4">{t("aboutStitchMadeBD")}</h1>
+            <p className="text-xl opacity-90">{t("excellenceInManufacturing")}</p>
           </div>
         </div>
       </section>
@@ -25,15 +29,9 @@ export default function AboutPage() {
       {/* Mission Section */}
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-4xl px-4">
-          <h2 className="text-3xl font-bold text-center text-deep-navy mb-8">Mission</h2>
+          <h2 className="text-3xl font-bold text-center text-deep-navy mb-8">{t("mission")}</h2>
           <p className="text-lg text-gray-700 text-center leading-relaxed max-w-3xl mx-auto">
-            At Stitch Made BD, our mission is to deliver exceptional garment manufacturing services
-            while maintaining the highest standards of quality, sustainability, and ethical practices.
-            We strive to be a trusted partner for global fashion brands, creating innovative and
-            high-quality apparel that meets international standards. Our commitment to excellence,
-            combined with our skilled workforce and state-of-the-art facilities, enables us to
-            produce garments that exceed customer expectations and contribute to the growth of
-            Bangladesh&apos;s textile industry.
+            {t("missionDescription")}
           </p>
         </div>
       </section>
@@ -41,28 +39,28 @@ export default function AboutPage() {
       {/* Organogram Section */}
       <section className="py-20 bg-light-gray">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">Organizational Structure</h2>
+          <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">{t("organizationalStructure")}</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="w-16 h-16 bg-teal rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-xl">CEO</span>
+                <span className="text-white font-bold text-xl">{t("ceo")}</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Chief Executive Officer</h3>
-              <p className="text-gray-600">Strategic leadership and company vision</p>
+              <h3 className="text-xl font-semibold mb-2">{t("chiefExecutiveOfficer")}</h3>
+              <p className="text-gray-600">{t("strategicLeadership")}</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="w-16 h-16 bg-teal rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-xl">COO</span>
+                <span className="text-white font-bold text-xl">{t("coo")}</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Chief Operations Officer</h3>
-              <p className="text-gray-600">Production management and quality control</p>
+              <h3 className="text-xl font-semibold mb-2">{t("chiefOperationsOfficer")}</h3>
+              <p className="text-gray-600">{t("productionManagement")}</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="w-16 h-16 bg-teal rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-xl">CFO</span>
+                <span className="text-white font-bold text-xl">{t("cfo")}</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Chief Financial Officer</h3>
-              <p className="text-gray-600">Financial planning and business development</p>
+              <h3 className="text-xl font-semibold mb-2">{t("chiefFinancialOfficer")}</h3>
+              <p className="text-gray-600">{t("financialPlanning")}</p>
             </div>
           </div>
         </div>
@@ -71,24 +69,24 @@ export default function AboutPage() {
       {/* License Section */}
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">Licenses & Certifications</h2>
+          <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">{t("licensesCertifications")}</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-light-gray p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-4 text-deep-navy">Trade License</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-deep-navy">{t("tradeLicense")}</h3>
               <div className="space-y-3 text-gray-700">
-                <p><strong>License Number:</strong> TL-2024-001234</p>
-                <p><strong>Issued Date:</strong> January 15, 2024</p>
-                <p><strong>Valid Until:</strong> December 31, 2025</p>
-                <p><strong>Issuing Authority:</strong> Dhaka City Corporation</p>
+                <p><strong>{t("licenseNumber")}</strong> TL-2024-001234</p>
+                <p><strong>{t("issuedDate")}</strong> January 15, 2024</p>
+                <p><strong>{t("validUntil")}</strong> December 31, 2025</p>
+                <p><strong>{t("issuingAuthority")}</strong> {t("dhakaCityCorporation")}</p>
               </div>
             </div>
             <div className="bg-light-gray p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-4 text-deep-navy">Bond License</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-deep-navy">{t("bondLicense")}</h3>
               <div className="space-y-3 text-gray-700">
-                <p><strong>License Number:</strong> BL-2024-005678</p>
-                <p><strong>Issued Date:</strong> February 1, 2024</p>
-                <p><strong>Valid Until:</strong> January 31, 2026</p>
-                <p><strong>Issuing Authority:</strong> Bangladesh Customs</p>
+                <p><strong>{t("licenseNumber")}</strong> BL-2024-005678</p>
+                <p><strong>{t("issuedDate")}</strong> February 1, 2024</p>
+                <p><strong>{t("validUntil")}</strong> January 31, 2026</p>
+                <p><strong>{t("issuingAuthority")}</strong> {t("bangladeshCustoms")}</p>
               </div>
             </div>
           </div>
@@ -98,37 +96,37 @@ export default function AboutPage() {
       {/* Building Layout Section */}
       <section className="py-20 bg-light-gray">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">Factory Layout</h2>
+          <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">{t("factoryLayout")}</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-2xl font-semibold mb-6 text-deep-navy">Our Facility</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-deep-navy">{t("ourFacility")}</h3>
               <div className="space-y-4 text-gray-700">
                 <div className="flex items-start gap-3">
                   <div className="w-3 h-3 bg-teal rounded-full mt-2 flex-shrink-0"></div>
                   <div>
-                    <h4 className="font-semibold">Ground Floor - Cutting Department</h4>
-                    <p>Advanced cutting machines and fabric inspection area</p>
+                    <h4 className="font-semibold">{t("groundFloorCutting")}</h4>
+                    <p>{t("cuttingDescription")}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-3 h-3 bg-teal rounded-full mt-2 flex-shrink-0"></div>
                   <div>
-                    <h4 className="font-semibold">1st Floor - Sewing Department</h4>
-                    <p>200+ sewing machines with quality control stations</p>
+                    <h4 className="font-semibold">{t("firstFloorSewing")}</h4>
+                    <p>{t("sewingDescription")}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-3 h-3 bg-teal rounded-full mt-2 flex-shrink-0"></div>
                   <div>
-                    <h4 className="font-semibold">2nd Floor - Finishing & Packaging</h4>
-                    <p>Final inspection, ironing, and packaging facilities</p>
+                    <h4 className="font-semibold">{t("secondFloorFinishing")}</h4>
+                    <p>{t("finishingDescription")}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-3 h-3 bg-teal rounded-full mt-2 flex-shrink-0"></div>
                   <div>
-                    <h4 className="font-semibold">3rd Floor - Office & Training</h4>
-                    <p>Administrative offices and employee training center</p>
+                    <h4 className="font-semibold">{t("thirdFloorOffice")}</h4>
+                    <p>{t("officeTrainingDescription")}</p>
                   </div>
                 </div>
               </div>
@@ -137,8 +135,8 @@ export default function AboutPage() {
               <div className="aspect-square bg-gradient-to-br from-teal/20 to-deep-navy/20 rounded-lg flex items-center justify-center">
                 <div className="text-center">
                   <div className="text-6xl mb-4">🏭</div>
-                  <p className="text-gray-600">Factory Layout Diagram</p>
-                  <p className="text-sm text-gray-500 mt-2">Interactive layout coming soon</p>
+                  <p className="text-gray-600">{t("factoryLayoutDiagram")}</p>
+                  <p className="text-sm text-gray-500 mt-2">{t("interactiveLayoutComingSoon")}</p>
                 </div>
               </div>
             </div>
@@ -149,11 +147,11 @@ export default function AboutPage() {
       {/* Equipment Information Section */}
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">Equipment & Technology</h2>
+          <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">{t("equipmentTechnology")}</h2>
           {/* JINDEX X7 */}
           <section className="py-20 bg-light-gray">
             <div className="w-full px-4">
-              <h2 className="text-2xl font-bold text-center text-deep-navy mb-8">Jindex X7: High-Precision CNC Cutting Machine</h2>
+              <h2 className="text-2xl font-bold text-center text-deep-navy mb-8">{t("jindexX7Title")}</h2>
               <div className="flex flex-col gap-12">
                 <div>
                   <Image
@@ -167,13 +165,13 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                    At Stitch Made BD, we pride ourselves on leveraging cutting-edge technology to achieve unparalleled precision and efficiency. Our flagship <span className="font-bold">Jindex X7</span> high-precision multi-function CNC cutting machine is a testament to this commitment. Engineered for mass production, it serves diverse sectors. This advanced system masterfully handles soft materials, consistently achieving a remarkable 7 cm cutting thickness after adsorption. It stands out with exceptional cutting speed, industry-leading accuracy, and intelligent, energy-efficient operations, underscoring our dedication to innovative and sustainable manufacturing.
+                    {t("jindexX7Description")}
                   </p>
-                  <h3 className="text-xl font-semibold mb-3 text-deep-navy">Key Specifications:</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-deep-navy">{t("keySpecifications")}</h3>
                   <ul className="space-y-2 text-gray-700">
-                    <li>• Max cutting speed: 80 meters / minute</li>
-                    <li>• Cutting accuracy: +/- 1mm</li>
-                    <li>• Cutting style: Vibrating knife tool at 5000 rpm</li>
+                    <li>{t("maxCuttingSpeed")}</li>
+                    <li>{t("cuttingAccuracy")}</li>
+                    <li>{t("cuttingStyle")}</li>
                   </ul>
                 </div>
               </div>
@@ -182,54 +180,54 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-light-gray p-6 rounded-lg">
               <div className="text-4xl mb-4">✂️</div>
-              <h3 className="text-xl font-semibold mb-3 text-deep-navy">Cutting Equipment</h3>
+              <h3 className="text-xl font-semibold mb-3 text-deep-navy">{t("cuttingEquipment")}</h3>
               <ul className="space-y-2 text-gray-700">
-                <li>• Computerized cutting machines</li>
-                <li>• Automatic fabric spreaders</li>
-                <li>• Laser cutting systems</li>
-                <li>• Fabric inspection tables</li>
+                <li>{t("computerizedCuttingMachines")}</li>
+                <li>{t("automaticFabricSpreaders")}</li>
+                <li>{t("laserCuttingSystems")}</li>
+                <li>{t("fabricInspectionTables")}</li>
               </ul>
             </div>
             <div className="bg-light-gray p-6 rounded-lg">
               <div className="text-4xl mb-4">🧵</div>
-              <h3 className="text-xl font-semibold mb-3 text-deep-navy">Sewing Equipment</h3>
+              <h3 className="text-xl font-semibold mb-3 text-deep-navy">{t("sewingEquipment")}</h3>
               <ul className="space-y-2 text-gray-700">
-                <li>• Single needle lockstitch machines</li>
-                <li>• Overlock machines</li>
-                <li>• Buttonhole machines</li>
-                <li>• Embroidery machines</li>
+                <li>{t("singleNeedleMachines")}</li>
+                <li>{t("overlockMachines")}</li>
+                <li>{t("buttonholeMachines")}</li>
+                <li>{t("embroideryMachines")}</li>
               </ul>
             </div>
             <div className="bg-light-gray p-6 rounded-lg">
               <div className="text-4xl mb-4">🔧</div>
-              <h3 className="text-xl font-semibold mb-3 text-deep-navy">Finishing Equipment</h3>
+              <h3 className="text-xl font-semibold mb-3 text-deep-navy">{t("finishingEquipment")}</h3>
               <ul className="space-y-2 text-gray-700">
-                <li>• Industrial steam irons</li>
-                <li>• Quality inspection stations</li>
-                <li>• Packaging machines</li>
-                <li>• Labeling systems</li>
+                <li>{t("industrialSteamIrons")}</li>
+                <li>{t("qualityInspectionStations")}</li>
+                <li>{t("packagingMachines")}</li>
+                <li>{t("labelingSystems")}</li>
               </ul>
             </div>
           </div>
 
           <div className="mt-12 bg-deep-navy text-white p-8 rounded-lg">
-            <h3 className="text-2xl font-semibold mb-4 text-center">Production Capacity</h3>
+            <h3 className="text-2xl font-semibold mb-4 text-center">{t("productionCapacity")}</h3>
             <div className="grid md:grid-cols-4 gap-6 text-center">
               <div>
                 <div className="text-3xl font-bold text-teal">50,000+</div>
-                <div className="text-sm opacity-80">Pieces per month</div>
+                <div className="text-sm opacity-80">{t("piecesPerMonth")}</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-teal">200+</div>
-                <div className="text-sm opacity-80">Sewing machines</div>
+                <div className="text-sm opacity-80">{t("sewingMachines")}</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-teal">150+</div>
-                <div className="text-sm opacity-80">Skilled workers</div>
+                <div className="text-sm opacity-80">{t("skilledWorkers")}</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-teal">24/7</div>
-                <div className="text-sm opacity-80">Production capability</div>
+                <div className="text-sm opacity-80">{t("productionCapability")}</div>
               </div>
             </div>
           </div>

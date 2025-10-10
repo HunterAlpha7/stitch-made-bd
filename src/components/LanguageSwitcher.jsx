@@ -1,18 +1,9 @@
 "use client";
 import { useState } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function LanguageSwitcher() {
-  const [currentLang, setCurrentLang] = useState("en");
-  const router = useRouter();
-  const pathname = usePathname();
-
-  const switchLanguage = (lang) => {
-    setCurrentLang(lang);
-    // For now, just update the state
-    // In a real implementation, you'd update the URL and content
-    console.log(`Switching to ${lang}`);
-  };
+  const { currentLang, switchLanguage } = useLanguage();
 
   return (
     <div className="flex gap-2">

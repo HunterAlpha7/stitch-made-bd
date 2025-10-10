@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { useLanguage } from '../contexts/LanguageContext';
 
 // Carousel Component
 function ImageCarousel() {
@@ -24,6 +25,8 @@ function ImageCarousel() {
 
     return () => clearInterval(interval);
   }, [images.length]);
+
+  const { t } = useLanguage();
 
   return (
     <section className="relative h-96 overflow-hidden">
@@ -48,8 +51,8 @@ function ImageCarousel() {
       ))}
       <div className="absolute inset-0 flex items-center justify-center z-10">
         <div className="text-center text-white">
-          <h1 className="text-5xl font-bold mb-4">Welcome to Stitch Made BD</h1>
-          <p className="text-xl opacity-90">Excellence in Garment Manufacturing</p>
+          <h1 className="text-5xl font-bold mb-4">{t("welcome")}</h1>
+          <p className="text-xl opacity-90">{t("excellenceInManufacturing")}</p>
         </div>
       </div>
     </section>
@@ -153,6 +156,7 @@ function BuyerLogo({ logo, name, website }) {
 }
 
 export default function Home() {
+  const { t } = useLanguage();
   return (
     <div className="min-h-screen">
       {/* Image Carousel */}
@@ -161,15 +165,9 @@ export default function Home() {
       {/* Who We Are Section */}
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-4xl px-4">
-          <h2 className="text-3xl font-bold text-center text-deep-navy mb-8">Who We Are</h2>
+          <h2 className="text-3xl font-bold text-center text-deep-navy mb-8">{t("whoWeAre")}</h2>
           <p className="text-lg text-gray-700 text-center leading-relaxed">
-            Stitch Made BD is a leading garment manufacturing company in Bangladesh, specializing in 
-            high-quality apparel production for global brands. With over 3 years of experience, we 
-            have built a reputation for excellence, reliability, and innovation in the textile industry. 
-            Our state-of-the-art facility, skilled workforce, and commitment to sustainable practices 
-            make us the preferred choice for brands seeking quality, efficiency, and ethical manufacturing. 
-            We pride ourselves on delivering exceptional products while maintaining the highest standards 
-            of quality control and customer satisfaction.
+            {t("whoWeAreDescription")}
           </p>
         </div>
       </section>
@@ -177,27 +175,27 @@ export default function Home() {
       {/* Milestone Section */}
       <section className="py-20 bg-light-gray">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">Our Milestones</h2>
+          <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">{t("ourMilestones")}</h2>
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <CountAnimation end={3} suffix="+" />
-              <h3 className="text-xl font-semibold mb-2 text-deep-navy">Years of Experience</h3>
-              <p className="text-gray-600">Dedicated to excellence</p>
+              <h3 className="text-xl font-semibold mb-2 text-deep-navy">{t("yearsOfExperience")}</h3>
+              <p className="text-gray-600">{t("dedicatedToExcellence")}</p>
             </div>
             <div className="text-center">
               <CountAnimation end={98} suffix="%" />
-              <h3 className="text-xl font-semibold mb-2 text-deep-navy">Repeat Customers</h3>
-              <p className="text-gray-600">Trust and satisfaction</p>
+              <h3 className="text-xl font-semibold mb-2 text-deep-navy">{t("repeatCustomers")}</h3>
+              <p className="text-gray-600">{t("trustAndSatisfaction")}</p>
             </div>
             <div className="text-center">
               <CountAnimation end={4} suffix="M" />
-              <h3 className="text-xl font-semibold mb-2 text-deep-navy">US Annual Turnover</h3>
-              <p className="text-gray-600">Growing business</p>
+              <h3 className="text-xl font-semibold mb-2 text-deep-navy">{t("annualTurnover")}</h3>
+              <p className="text-gray-600">{t("growingBusiness")}</p>
             </div>
             <div className="text-center">
               <CountAnimation end={300} suffix="K" />
-              <h3 className="text-xl font-semibold mb-2 text-deep-navy">Capacity Per Year</h3>
-              <p className="text-gray-600">Units produced</p>
+              <h3 className="text-xl font-semibold mb-2 text-deep-navy">{t("capacityPerYear")}</h3>
+              <p className="text-gray-600">{t("unitsProduced")}</p>
             </div>
           </div>
         </div>
@@ -206,21 +204,21 @@ export default function Home() {
       {/* Products Section */}
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">Our Products</h2>
+          <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">{t("ourProducts")}</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <ProductCard 
               image="/product1.svg"
-              title="Work Wear"
+              title={t("workWear")}
               href="/products/casual"
             />
             <ProductCard 
               image="/ladies-bottom.png"
-              title="Ladies Bottom"
+              title={t("ladiesBottom")}
               href="/products"
             />
             <ProductCard 
               image="/mens-bottom.png"
-              title="Mens Bottom"
+              title={t("mensBottom")}
               href="/products"
             />
           </div>
@@ -230,7 +228,7 @@ export default function Home() {
       {/* Our Buyers Section */}
       <section className="py-20 bg-light-gray">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">Our Buyers</h2>
+          <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">{t("ourBuyers")}</h2>
           <div className="flex flex-col lg:flex-row justify-center items-stretch gap-8">
             <div className="flex-1 grid grid-cols-1 md:grid-cols-5 gap-8">
               <div className="md:col-span-5">
@@ -285,12 +283,12 @@ export default function Home() {
       {/* Call to Action Section */}
       <section className="py-20 bg-deep-navy text-white">
         <div className="mx-auto max-w-4xl px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Partner with Us for Garment Excellence</h2>
+          <h2 className="text-3xl font-bold mb-6">{t("partnerWithUs")}</h2>
           <p className="text-xl opacity-90 mb-8">
-            Ready to elevate your brand with high-quality garment manufacturing? Contact us today to discuss your production needs.
+            {t("callToActionDescription")}
           </p>
           <Link href="/contact" className="bg-teal text-white px-8 py-4 rounded-lg font-semibold hover:bg-teal/90 transition-colors inline-block">
-            Get In Touch
+            {t("getInTouch")}
           </Link>
         </div>
     </section>
