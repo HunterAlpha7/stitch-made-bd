@@ -70,23 +70,32 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">{t("licensesCertifications")}</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-light-gray p-8 rounded-lg">
               <h3 className="text-2xl font-semibold mb-4 text-deep-navy">{t("tradeLicense")}</h3>
               <div className="space-y-3 text-gray-700">
-                <p><strong>{t("licenseNumber")}</strong> TL-2024-001234</p>
-                <p><strong>{t("issuedDate")}</strong> January 15, 2024</p>
-                <p><strong>{t("validUntil")}</strong> December 31, 2025</p>
+                <p><strong>{t("licenseNumber")}</strong> 362/ 2025 - 2026</p>
+                <p><strong>{t("issuedDate")}</strong> August 17, 2024</p>
+                <p><strong>{t("validUntil")}</strong> June 30, 2026</p>
                 <p><strong>{t("issuingAuthority")}</strong> {t("dhakaCityCorporation")}</p>
               </div>
             </div>
             <div className="bg-light-gray p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-4 text-deep-navy">{t("bondLicense")}</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-deep-navy">{t("fireLicense")}</h3>
               <div className="space-y-3 text-gray-700">
-                <p><strong>{t("licenseNumber")}</strong> BL-2024-005678</p>
-                <p><strong>{t("issuedDate")}</strong> February 1, 2024</p>
-                <p><strong>{t("validUntil")}</strong> January 31, 2026</p>
-                <p><strong>{t("issuingAuthority")}</strong> {t("bangladeshCustoms")}</p>
+                <p><strong>{t("licenseNumber")}</strong> DD/DHAKA/35645/2025</p>
+                <p><strong>{t("issuedDate")}</strong> September 24, 2025</p>
+                <p><strong>{t("validUntil")}</strong> June 30, 2026</p>
+                <p><strong>{t("issuingAuthority")}</strong> {t("fireServiceAndCivilDefense")}</p>
+              </div>
+            </div>
+            <div className="bg-light-gray p-8 rounded-lg">
+              <h3 className="text-2xl font-semibold mb-4 text-deep-navy">{t("factoryLicense")}</h3>
+              <div className="space-y-3 text-gray-700">
+                <p><strong>{t("licenseNumber")}</strong> 33-30-1-002-00448</p>
+                <p><strong>{t("issuedDate")}</strong> September 22, 2025</p>
+                <p><strong>{t("validUntil")}</strong> September 21, 2026</p>
+                <p><strong>{t("issuingAuthority")}</strong> {t("departmentOfInspectionForFactoriesAndEstablishments")}</p>
               </div>
             </div>
           </div>
@@ -113,20 +122,6 @@ export default function AboutPage() {
                   <div>
                     <h4 className="font-semibold">{t("firstFloorSewing")}</h4>
                     <p>{t("sewingDescription")}</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-3 h-3 bg-teal rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="font-semibold">{t("secondFloorFinishing")}</h4>
-                    <p>{t("finishingDescription")}</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-3 h-3 bg-teal rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="font-semibold">{t("thirdFloorOffice")}</h4>
-                    <p>{t("officeTrainingDescription")}</p>
                   </div>
                 </div>
               </div>
