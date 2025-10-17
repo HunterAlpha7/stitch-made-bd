@@ -106,5 +106,5 @@ export const en = {
   piecesPerMonth: "Pieces per month",
   sewingMachines: "Sewing machines",
   skilledWorkers: "Skilled workers",
-  productionCapability: "Production capability",
+  productionCapability: "QC Pass",
 };

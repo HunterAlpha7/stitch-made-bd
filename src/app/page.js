@@ -113,9 +113,9 @@ function CountAnimation({ end, duration = 2000, suffix = '' }) {
 function ProductCard({ image, title, href }) {
   return (
     <Link href={href} className="group block">
-      <div className="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105">
+      <div className="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300">
         <div 
-          className="aspect-square bg-gradient-to-br from-teal/20 to-deep-navy/20"
+          className="h-96 w-64 bg-gradient-to-br from-teal/20 to-deep-navy/20"
           style={{
             backgroundImage: `url(${image})`,
             backgroundSize: 'cover',
@@ -207,9 +207,9 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">{t("ourProducts")}</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <ProductCard 
-              image="/product1.svg"
+              image="/Workwear.jpg"
               title={t("workWear")}
-              href="/products/casual"
+              href="/products/"
             />
             <ProductCard 
               image="/ladies-bottom.png"
@@ -230,8 +230,8 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">{t("ourBuyers")}</h2>
           <div className="flex flex-col lg:flex-row justify-center items-stretch gap-8">
-            <div className="flex-1 grid grid-cols-1 md:grid-cols-5 gap-8">
-              <div className="md:col-span-5">
+            <div className="flex-1 grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div className="md:col-span-4">
                 <BuyerLogo
                   logo="/logos/chori-logo.svg"
                   name="Chori"
@@ -250,20 +250,16 @@ export default function Home() {
               />
               <BuyerLogo
                 logo="/"
-                name="LOGO - 1 (C)"
+                name="Yamaichi"
                 website="#"
               />
               
               <BuyerLogo
                 logo="/"
-                name="LOGO - 1 (D)"
+                name="Yamanishi"
                 website="#"
               />
-              <BuyerLogo
-                logo="/"
-                name="LOGO - 1 (E)"
-                website="#"
-              />
+              
             </div>
             <div className="flex-shrink-0 grid grid-cols-1 gap-8">
               <BuyerLogo

@@ -217,11 +217,11 @@ export default function AboutPage() {
                 <div className="text-sm opacity-80">{t("sewingMachines")}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-teal">150+</div>
+                <div className="text-3xl font-bold text-teal">250+</div>
                 <div className="text-sm opacity-80">{t("skilledWorkers")}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-teal">24/7</div>
+                <div className="text-3xl font-bold text-teal">99%</div>
                 <div className="text-sm opacity-80">{t("productionCapability")}</div>
               </div>
             </div>
