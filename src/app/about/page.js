@@ -143,67 +143,84 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">{t("equipmentTechnology")}</h2>
-          {/* JINDEX X7 */}
+          {/* Cutting Section */}
           <section className="py-20 bg-light-gray">
-            <div className="w-full px-4">
-              <h2 className="text-2xl font-bold text-center text-deep-navy mb-8">{t("jindexX7Title")}</h2>
-              <div className="flex flex-col gap-12">
-                <div>
-                  <Image
-                    src="/factory_images/Jindex_X7.jpg"
-                    alt="High-Precision Multi-Function CNC Cutting Machine"
-                    width={600}
-                    height={400}
-                    objectFit="contain"
-                    className="rounded-lg mx-auto block"
-                  />
+            <div className="mx-auto max-w-6xl px-4">
+              <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">{t("cuttingSectionTitle")}</h2>
+              {/* JINDEX X7 */}
+              <div className="w-full px-4 mb-12">
+                <h3 className="text-2xl font-bold text-center text-deep-navy mb-8">{t("jindexX7Title")}</h3>
+                <div className="flex flex-col gap-12 lg:flex-row items-center">
+                  <div className="lg:w-1/2">
+                    <Image
+                      src="/factory_images/Jindex_X7.jpg"
+                      alt="High-Precision Multi-Function CNC Cutting Machine"
+                      width={600}
+                      height={400}
+                      objectFit="contain"
+                      className="rounded-lg mx-auto block"
+                    />
+                  </div>
+                  <div className="lg:w-1/2">
+                    <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                      {t("jindexX7Description")}
+                    </p>
+                    <h4 className="text-xl font-semibold mb-3 text-deep-navy">{t("keySpecifications")}</h4>
+                    <ul className="space-y-2 text-gray-700">
+                      <li>{t("maxCuttingSpeed")}</li>
+                      <li>{t("cuttingAccuracy")}</li>
+                      <li>{t("cuttingStyle")}</li>
+                    </ul>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                    {t("jindexX7Description")}
-                  </p>
-                  <h3 className="text-xl font-semibold mb-3 text-deep-navy">{t("keySpecifications")}</h3>
-                  <ul className="space-y-2 text-gray-700">
-                    <li>{t("maxCuttingSpeed")}</li>
-                    <li>{t("cuttingAccuracy")}</li>
-                    <li>{t("cuttingStyle")}</li>
-                  </ul>
-                </div>
+              </div>
+              {/* Other Cutting Equipment */}
+              <div className="bg-light-gray p-6 rounded-lg">
+                <div className="text-4xl mb-4">✂️</div>
+                <h3 className="text-xl font-semibold mb-3 text-deep-navy">{t("cuttingEquipment")}</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li>{t("computerizedCuttingMachines")}</li>
+                  <li>{t("automaticFabricSpreaders")}</li>
+                  <li>{t("laserCuttingSystems")}</li>
+                  <li>{t("fabricInspectionTables")}</li>
+                </ul>
               </div>
             </div>
           </section>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-light-gray p-6 rounded-lg">
-              <div className="text-4xl mb-4">✂️</div>
-              <h3 className="text-xl font-semibold mb-3 text-deep-navy">{t("cuttingEquipment")}</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>{t("computerizedCuttingMachines")}</li>
-                <li>{t("automaticFabricSpreaders")}</li>
-                <li>{t("laserCuttingSystems")}</li>
-                <li>{t("fabricInspectionTables")}</li>
-              </ul>
+
+          {/* Sewing Section */}
+          <section className="py-20 bg-white">
+            <div className="mx-auto max-w-6xl px-4">
+              <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">{t("sewingSectionTitle")}</h2>
+              <div className="bg-light-gray p-6 rounded-lg">
+                <div className="text-4xl mb-4">🧵</div>
+                <h3 className="text-xl font-semibold mb-3 text-deep-navy">{t("sewingEquipment")}</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li>{t("singleNeedleMachines")}</li>
+                  <li>{t("overlockMachines")}</li>
+                  <li>{t("buttonholeMachines")}</li>
+                  <li>{t("embroideryMachines")}</li>
+                </ul>
+              </div>
             </div>
-            <div className="bg-light-gray p-6 rounded-lg">
-              <div className="text-4xl mb-4">🧵</div>
-              <h3 className="text-xl font-semibold mb-3 text-deep-navy">{t("sewingEquipment")}</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>{t("singleNeedleMachines")}</li>
-                <li>{t("overlockMachines")}</li>
-                <li>{t("buttonholeMachines")}</li>
-                <li>{t("embroideryMachines")}</li>
-              </ul>
+          </section>
+
+          {/* Finishing Section */}
+          <section className="py-20 bg-light-gray">
+            <div className="mx-auto max-w-6xl px-4">
+              <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">{t("finishingSectionTitle")}</h2>
+              <div className="bg-light-gray p-6 rounded-lg">
+                <div className="text-4xl mb-4">🔧</div>
+                <h3 className="text-xl font-semibold mb-3 text-deep-navy">{t("finishingEquipment")}</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li>{t("industrialSteamIrons")}</li>
+                  <li>{t("qualityInspectionStations")}</li>
+                  <li>{t("packagingMachines")}</li>
+                  <li>{t("labelingSystems")}</li>
+                </ul>
+              </div>
             </div>
-            <div className="bg-light-gray p-6 rounded-lg">
-              <div className="text-4xl mb-4">🔧</div>
-              <h3 className="text-xl font-semibold mb-3 text-deep-navy">{t("finishingEquipment")}</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>{t("industrialSteamIrons")}</li>
-                <li>{t("qualityInspectionStations")}</li>
-                <li>{t("packagingMachines")}</li>
-                <li>{t("labelingSystems")}</li>
-              </ul>
-            </div>
-          </div>
+          </section>
 
           <div className="mt-12 bg-deep-navy text-white p-8 rounded-lg">
             <h3 className="text-2xl font-semibold mb-4 text-center">{t("productionCapacity")}</h3>

@@ -107,4 +107,7 @@ export const en = {
   sewingMachines: "Sewing machines",
   skilledWorkers: "Skilled workers",
   productionCapability: "QC Pass",
+  cuttingSectionTitle: "Cutting Section",
+  sewingSectionTitle: "Sewing Section",
+  finishingSectionTitle: "Finishing Section",
 };
