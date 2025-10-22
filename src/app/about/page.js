@@ -54,7 +54,7 @@ export default function AboutPage() {
       {/* Hero Section with Image */}
       <section className="relative h-96">
         <Image
-          src="/factory_images/factory1.jpg"
+          src="/Jindex_X7.jpg"
           alt="Stitch Made BD Factory"
           layout="fill"
           objectFit="cover"
