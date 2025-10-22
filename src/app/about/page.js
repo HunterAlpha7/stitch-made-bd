@@ -75,7 +75,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-4xl px-4">
           <h2 className="text-3xl font-bold text-center text-deep-navy mb-8">Mission</h2>
           <p className="text-lg text-gray-700 text-center leading-relaxed max-w-3xl mx-auto">
-            At Stitch Made BD, our mission is to deliver exceptional garment manufacturing services while maintaining the highest standards of quality, sustainability, and ethical practices. We strive to be a trusted partner for global fashion brands, creating innovative and high-quality apparel that meets international standards. Our commitment to excellence, combined with our skilled workforce and state-of-the-art facilities, enables us to produce garments that exceed customer expectations and contribute to the growth of Bangladesh's textile industry.
+            At Stitch Made BD, our mission is to deliver exceptional garment manufacturing services while maintaining the highest standards of quality, sustainability, and ethical practices. We strive to be a trusted partner for global fashion brands, creating innovative and high-quality apparel that meets international standards. Our commitment to excellence, combined with our skilled workforce and state-of-the-art facilities, enables us to produce garments that exceed customer expectations and contribute to the growth of Bangladesh&apos;s textile industry.
           </p>
         </div>
       </section>

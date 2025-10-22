@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 // import { useLanguage } from '../contexts/LanguageContext'; // Removed as per user request
 
 // Carousel Component
@@ -145,7 +146,7 @@ function BuyerLogo({ logo, name, website }) {
     >
       <div className="w-24 h-24 mx-auto bg-light-gray rounded-lg flex items-center justify-center">
         {logo ? (
-          <img src={logo} alt={name} className="max-w-full max-h-full object-contain" />
+          <Image src={logo} alt={name} width={96} height={96} className="max-w-full max-h-full object-contain" />
         ) : (
           <span className="text-2xl font-bold text-deep-navy">{name}</span>
         )}
