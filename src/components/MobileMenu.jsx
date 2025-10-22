@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import LanguageSwitcher from './LanguageSwitcher';
+// import LanguageSwitcher from './LanguageSwitcher'; // Removed as per user request
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -78,9 +78,9 @@ export default function MobileMenu() {
             Contact
           </Link>
         </nav>
-        <div className="absolute bottom-4 left-4">
+        {/* <div className="absolute bottom-4 left-4">
           <LanguageSwitcher />
-        </div>
+        </div> */} {/* Commented out to remove language functionality */}
       </div>
       {isOpen && (
         <div

@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ContactFab from "../components/ContactFab";
-import { LanguageProvider } from "../contexts/LanguageContext";
+// import { LanguageProvider } from "../contexts/LanguageContext"; // Removed as per user request
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -24,12 +24,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}>
-        <LanguageProvider>
+        {/* <LanguageProvider> */} {/* Removed as per user request */}
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
           <ContactFab />
-        </LanguageProvider>
+        {/* </LanguageProvider> */} {/* Removed as per user request */}
       </body>
     </html>
   );
