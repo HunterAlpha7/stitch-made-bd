@@ -151,7 +151,7 @@ export default function ProductSection({ title, category }) {
           {visibleImages.map((filename, index) => (
             <div
               key={`${filename}-${startIndex + index}`}
-              className="relative w-full aspect-square overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 group"
+              className="relative w-full aspect-[4/3] overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 group"
             >
               <Image
                 src={`/products/${category}/${filename}`}
@@ -165,7 +165,7 @@ export default function ProductSection({ title, category }) {
           {/* Fill empty slots if needed for consistent layout */}
           {visibleImages.length < itemsPerPage &&
             Array.from({ length: itemsPerPage - visibleImages.length }).map((_, index) => (
-              <div key={`empty-${index}`} className="aspect-square" />
+              <div key={`empty-${index}`} className="aspect-[4/3]" />
             ))}
         </div>
 

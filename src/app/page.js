@@ -208,34 +208,34 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">Our Products</h2>
           <div className="grid gap-8 justify-items-center md:grid-cols-3 md:grid-rows-2 md:grid-flow-col">
             <ProductCard 
-              image="/mens-top.png"
-              title="Men Top"
+              image="/Workwear.jpg"
+              title="Workwear"
               href="/products"
             />
             <ProductCard 
-              image="/mens-bottom.png"
+              image="/mens_bottom.png"
               title="Men Bottom"
               href="/products"
-            />
+            />            
             <ProductCard 
-              image="/Workwear.jpg"
-              title="Work Wear"
-              href="/products"
-            />
-            <ProductCard 
-              image="/kids-item.png"
+              image="/kids.jpg"
               title="Kids Item"
               href="/products"
             />
             <ProductCard 
-              image="/ladies-top.png"
+              image=""
+              title=""
+              href="#"
+            />
+            <ProductCard 
+              image="/ladies_top.jpg"
               title="Ladies Top"
               href="/products"
             />
             
             
             <ProductCard 
-              image="/ladies-bottom.png"
+              image="/ladies_bottom.png"
               title="Ladies Bottom"
               href="/products"
             />

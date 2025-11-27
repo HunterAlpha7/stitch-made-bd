@@ -83,29 +83,20 @@ export default function AboutPage() {
       {/* Organogram Section */}
       <section className="py-20 bg-light-gray">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">Organizational Structure</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-teal rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-xl">CEO</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Chief Executive Officer</h3>
-              <p className="text-gray-600">Strategic leadership and company vision</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-teal rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-xl">COO</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Chief Operations Officer</h3>
-              <p className="text-gray-600">Production management and quality control</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-teal rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-xl">CFO</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Chief Financial Officer</h3>
-              <p className="text-gray-600">Financial planning and business development</p>
-            </div>
+          <h2 className="text-3xl font-bold text-center text-deep-navy mb-4">Organizational Structure</h2>
+          <p className="text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+            A snapshot of how our leadership, production, quality, and support teams connect to keep Stitch
+            Made BD running efficiently.
+          </p>
+          <div className="relative w-full max-w-5xl mx-auto">
+            <Image
+              src="/organogram.svg"
+              alt="Stitch Made BD organizational structure"
+              width={3086}
+              height={2798}
+              className="w-full h-auto rounded-lg shadow-md border border-gray-200 bg-white"
+              priority
+            />
           </div>
         </div>
       </section>
