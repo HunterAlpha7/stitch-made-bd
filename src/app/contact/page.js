@@ -1,6 +1,6 @@
 "use client";
 
-const MAP_LOCATION_QUERY = "Stitch Made Ltd.";
+const MAP_LOCATION_QUERY = "Stitch Made Ltd (SML)";
 const MAP_PLACE_LABEL = "Holding # 72/3, Block #3, Bahadurpur, Bhawal Mirzapur, Gazipur City, Gazipur - 1703";
 
 export default function ContactPage() {
