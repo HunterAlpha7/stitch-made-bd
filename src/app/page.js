@@ -206,20 +206,37 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">Our Products</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid gap-8 justify-items-center md:grid-cols-3 md:grid-rows-2 md:grid-flow-col">
             <ProductCard 
-              image="/Workwear.jpg"
-              title="Work Wear"
-              href="/products/"
-            />
-            <ProductCard 
-              image="/ladies-bottom.png"
-              title="Ladies Bottom"
+              image="/mens-top.png"
+              title="Men Top"
               href="/products"
             />
             <ProductCard 
               image="/mens-bottom.png"
-              title="Mens Bottom"
+              title="Men Bottom"
+              href="/products"
+            />
+            <ProductCard 
+              image="/Workwear.jpg"
+              title="Work Wear"
+              href="/products"
+            />
+            <ProductCard 
+              image="/kids-item.png"
+              title="Kids Item"
+              href="/products"
+            />
+            <ProductCard 
+              image="/ladies-top.png"
+              title="Ladies Top"
+              href="/products"
+            />
+            
+            
+            <ProductCard 
+              image="/ladies-bottom.png"
+              title="Ladies Bottom"
               href="/products"
             />
           </div>

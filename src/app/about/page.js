@@ -170,14 +170,15 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="aspect-square bg-gradient-to-br from-teal/20 to-deep-navy/20 rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">🏭</div>
-                  <p className="text-gray-600">Factory Layout Diagram</p>
-                  <p className="text-sm text-gray-500 mt-2">Interactive layout coming soon</p>
-                </div>
-              </div>
+            <div className="bg-white p-4 rounded-lg shadow-md">
+              <Image
+                src="/factory_images/Factory_layout.jpg"
+                alt="Factory layout diagram"
+                width={800}
+                height={800}
+                className="w-full h-auto rounded-lg object-contain"
+                priority
+              />
             </div>
           </div>
         </div>

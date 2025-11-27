@@ -1,6 +1,15 @@
 "use client";
 
+const MAP_LOCATION_QUERY = "Stitch Made Ltd.";
+const MAP_PLACE_LABEL = "Holding # 72/3, Block #3, Bahadurpur, Bhawal Mirzapur, Gazipur City, Gazipur - 1703";
+
 export default function ContactPage() {
+  const googleMapsApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+  const encodedLocation = encodeURIComponent(MAP_LOCATION_QUERY);
+  const mapSrc = googleMapsApiKey
+    ? `https://www.google.com/maps/embed/v1/place?key=${googleMapsApiKey}&q=${encodedLocation}&zoom=15`
+    : null;
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -66,13 +75,25 @@ export default function ContactPage() {
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-deep-navy text-center">Find Us on the Map</h3>
               <div className="bg-white p-8 rounded-lg shadow-md">
-                <div className="aspect-video bg-gradient-to-br from-teal/20 to-deep-navy/20 rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-6xl mb-4">🗺️</div>
-                    <p className="text-gray-600">Interactive Map Coming Soon!</p>
-                    <p className="text-sm text-gray-500 mt-2">Moroa, Valuka, Mymensingh, Bangladesh</p>
+                {mapSrc ? (
+                  <iframe
+                    title="Stitch Made BD Location"
+                    src={mapSrc}
+                    loading="lazy"
+                    allowFullScreen
+                    className="w-full aspect-video rounded-lg border border-gray-200"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                ) : (
+                  <div className="aspect-video bg-gradient-to-br from-teal/20 to-deep-navy/20 rounded-lg flex items-center justify-center text-center px-6">
+                    <div>
+                      <div className="text-6xl mb-4">🗺️</div>
+                      <p className="text-gray-600">Map preview unavailable.</p>
+                      <p className="text-sm text-gray-500 mt-2">Add `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` to show the live map.</p>
+                      <p className="text-sm text-gray-500 mt-2">{MAP_PLACE_LABEL}</p>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           </div>
