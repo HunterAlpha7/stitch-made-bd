@@ -1,9 +1,12 @@
 "use client";
 
+import { useLanguage } from '../../contexts/LanguageContext';
+
 const MAP_LOCATION_QUERY = "Stitch Made Ltd (SML)";
 const MAP_PLACE_LABEL = "Holding # 72/3, Block #3, Bahadurpur, Bhawal Mirzapur, Gazipur City, Gazipur - 1703";
 
 export default function ContactPage() {
+  const { t } = useLanguage();
   const googleMapsApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
   const encodedLocation = encodeURIComponent(MAP_LOCATION_QUERY);
   const mapSrc = googleMapsApiKey
@@ -17,8 +20,8 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="text-center text-white">
-            <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
-            <p className="text-xl opacity-90">We&apos;re here to discuss your apparel manufacturing needs.</p>
+            <h1 className="text-4xl font-bold mb-4">{t("contactUs")}</h1>
+            <p className="text-xl opacity-90">{t("wereHereToDiscuss")}</p>
           </div>
         </div>
       </section>
@@ -26,17 +29,17 @@ export default function ContactPage() {
       {/* Contact Information + Maps Section */}
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">Get in Touch</h2>
+          <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">{t("getInTouchTitle")}</h2>
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-semibold mb-6 text-deep-navy">Contact Information</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-deep-navy">{t("contactInformation")}</h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-teal rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-white text-xl">📍</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-deep-navy mb-1">Our Factory Address</h4>
+                    <h4 className="font-semibold text-deep-navy mb-1">{t("ourFactoryAddress")}</h4>
                     <p className="text-gray-600">Holding # 72/3, Block #3, Bahadurpur, Bhawal Mirzapur, Gazipur City, Gazipur - 1703</p>
                   </div>
                 </div>
@@ -45,7 +48,7 @@ export default function ContactPage() {
                     <span className="text-white text-xl">📧</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-deep-navy mb-1">Email Us</h4>
+                    <h4 className="font-semibold text-deep-navy mb-1">{t("emailUs")}</h4>
                     <p className="text-gray-600">info@stitchmadebd.com</p>
                     <p className="text-gray-600">sales@stitchmadebd.com</p>
                   </div>
@@ -55,7 +58,7 @@ export default function ContactPage() {
                     <span className="text-white text-xl">📞</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-deep-navy mb-1">Call Us</h4>
+                    <h4 className="font-semibold text-deep-navy mb-1">{t("callUs")}</h4>
                     <p className="text-gray-600">+880 1678 306 200</p>                 
                   </div>
                 </div>
@@ -64,16 +67,16 @@ export default function ContactPage() {
                     <span className="text-white text-xl">🕒</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-deep-navy mb-1">Business Hours</h4>
-                    <p className="text-gray-600">Saturday - Thursday: 9 AM - 5 PM</p>
-                    <p className="text-gray-600">Friday: Closed</p>
+                    <h4 className="font-semibold text-deep-navy mb-1">{t("businessHours")}</h4>
+                    <p className="text-gray-600">{t("saturdayThursday")}</p>
+                    <p className="text-gray-600">{t("friday")}</p>
                   </div>
                 </div>
               </div>
             </div>
             {/* Maps Section */}
             <div>
-              <h3 className="text-2xl font-semibold mb-6 text-deep-navy text-center">Find Us on the Map</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-deep-navy text-center">{t("findUsOnTheMap")}</h3>
               <div className="bg-white p-8 rounded-lg shadow-md">
                 {mapSrc ? (
                   <iframe
@@ -88,8 +91,8 @@ export default function ContactPage() {
                   <div className="aspect-video bg-gradient-to-br from-teal/20 to-deep-navy/20 rounded-lg flex items-center justify-center text-center px-6">
                     <div>
                       <div className="text-6xl mb-4">🗺️</div>
-                      <p className="text-gray-600">Map preview unavailable.</p>
-                      <p className="text-sm text-gray-500 mt-2">Add `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` to show the live map.</p>
+                      <p className="text-gray-600">{t("mapPreviewUnavailable")}</p>
+                      <p className="text-sm text-gray-500 mt-2">{t("addGoogleMapsApiKey")}</p>
                       <p className="text-sm text-gray-500 mt-2">{MAP_PLACE_LABEL}</p>
                     </div>
                   </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-// import { useLanguage } from '../../contexts/LanguageContext'; // Removed as per edit hint
+import { useLanguage } from '../../contexts/LanguageContext';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -37,16 +37,16 @@ function SewingMachineCard({ image, title }) {
 }
 
 export default function AboutPage() {
-  // const { t } = useLanguage(); // Commented out to remove language functionality
+  const { t } = useLanguage();
 
   const sewingMachines = [
-    { id: 1, name: "Automatic Pattern Sewing Machine", image: "/sewing_machines/Auto_Pattern_Sewing.jpg" },
-    { id: 2, name: "Chainstitch Machine", image: "/sewing_machines/chainstitch_machine.png" },
-    { id: 3, name: "Two Needle Machine", image: "/sewing_machines/double-needle.png" },
-    { id: 4, name: "Flatlock Machine", image: "/sewing_machines/flatlock.png" },
-    { id: 5, name: "Kansai Machine", image: "/sewing_machines/Kansai.png" },
-    { id: 6, name: "Overlock Machine", image: "/sewing_machines/Overlock_Machine.png" },
-    { id: 7, name: "Plain Machine", image: "/sewing_machines/plain_machine.png" },
+    { id: 1, name: t("automaticPatternSewingMachine"), image: "/sewing_machines/Auto_Pattern_Sewing.jpg" },
+    { id: 2, name: t("chainstitchMachine"), image: "/sewing_machines/chainstitch_machine.png" },
+    { id: 3, name: t("twoNeedleMachine"), image: "/sewing_machines/double-needle.png" },
+    { id: 4, name: t("flatlockMachine"), image: "/sewing_machines/flatlock.png" },
+    { id: 5, name: t("kansaiMachine"), image: "/sewing_machines/Kansai.png" },
+    { id: 6, name: t("overlockMachine"), image: "/sewing_machines/Overlock_Machine.png" },
+    { id: 7, name: t("plainMachine"), image: "/sewing_machines/plain_machine.png" },
   ];
 
   return (
@@ -64,8 +64,8 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-black/50 z-10"></div>
         <div className="relative z-20 h-full flex items-center justify-center">
           <div className="text-center text-white">
-            <h1 className="text-5xl font-bold mb-4">About Stitch Made BD</h1>
-            <p className="text-xl opacity-90">Excellence in Garment Manufacturing</p>
+            <h1 className="text-5xl font-bold mb-4">{t("aboutStitchMadeBD")}</h1>
+            <p className="text-xl opacity-90">{t("excellenceInGarmentManufacturing")}</p>
           </div>
         </div>
       </section>
@@ -73,9 +73,9 @@ export default function AboutPage() {
       {/* Mission Section */}
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-4xl px-4">
-          <h2 className="text-3xl font-bold text-center text-deep-navy mb-8">Mission</h2>
+          <h2 className="text-3xl font-bold text-center text-deep-navy mb-8">{t("mission")}</h2>
           <p className="text-lg text-gray-700 text-center leading-relaxed max-w-3xl mx-auto">
-            At Stitch Made BD, our mission is to deliver exceptional garment manufacturing services while maintaining the highest standards of quality, sustainability, and ethical practices. We strive to be a trusted partner for global fashion brands, creating innovative and high-quality apparel that meets international standards. Our commitment to excellence, combined with our skilled workforce and state-of-the-art facilities, enables us to produce garments that exceed customer expectations and contribute to the growth of Bangladesh&apos;s textile industry.
+            {t("missionDescription")}
           </p>
         </div>
       </section>
@@ -83,10 +83,9 @@ export default function AboutPage() {
       {/* Organogram Section */}
       <section className="py-20 bg-light-gray">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="text-3xl font-bold text-center text-deep-navy mb-4">Organizational Structure</h2>
+          <h2 className="text-3xl font-bold text-center text-deep-navy mb-4">{t("organizationalStructure")}</h2>
           <p className="text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            A snapshot of how our leadership, production, quality, and support teams connect to keep Stitch
-            Made BD running efficiently.
+            {t("organizationalStructureDescription")}
           </p>
           <div className="relative w-full max-w-5xl mx-auto">
             <Image
@@ -104,33 +103,33 @@ export default function AboutPage() {
       {/* License Section */}
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">Licenses & Certifications</h2>
+          <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">{t("licensesCertifications")}</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-light-gray p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-4 text-deep-navy">Trade License</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-deep-navy">{t("tradeLicense")}</h3>
               <div className="space-y-3 text-gray-700">
-                <p><strong>License Number:</strong> 362/ 2025 - 2026</p>
-                <p><strong>Issued Date:</strong> August 17, 2024</p>
-                <p><strong>Valid Until:</strong> June 30, 2026</p>
-                <p><strong>Issuing Authority:</strong> Gazipur City Corporation</p>
+                <p><strong>{t("licenseNumber")}:</strong> 362/ 2025 - 2026</p>
+                <p><strong>{t("issuedDate")}:</strong> August 17, 2024</p>
+                <p><strong>{t("validUntil")}:</strong> June 30, 2026</p>
+                <p><strong>{t("issuingAuthority")}:</strong> Gazipur City Corporation</p>
               </div>
             </div>
             <div className="bg-light-gray p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-4 text-deep-navy">Fire License</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-deep-navy">{t("fireLicense")}</h3>
               <div className="space-y-3 text-gray-700">
-                <p><strong>License Number:</strong> DD/DHAKA/35645/2025</p>
-                <p><strong>Issued Date:</strong> September 24, 2025</p>
-                <p><strong>Valid Until:</strong> June 30, 2026</p>
-                <p><strong>Issuing Authority:</strong> Fire Service and Civil Defense, Dhaka</p>
+                <p><strong>{t("licenseNumber")}:</strong> DD/DHAKA/35645/2025</p>
+                <p><strong>{t("issuedDate")}:</strong> September 24, 2025</p>
+                <p><strong>{t("validUntil")}:</strong> June 30, 2026</p>
+                <p><strong>{t("issuingAuthority")}:</strong> Fire Service and Civil Defense, Dhaka</p>
               </div>
             </div>
             <div className="bg-light-gray p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-4 text-deep-navy">Factory License</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-deep-navy">{t("factoryLicense")}</h3>
               <div className="space-y-3 text-gray-700">
-                <p><strong>License Number:</strong> 33-30-1-002-00448</p>
-                <p><strong>Issued Date:</strong> September 22, 2025</p>
-                <p><strong>Valid Until:</strong> September 21, 2026</p>
-                <p><strong>Issuing Authority:</strong> Department of Inspection for Factories and Establishments, Gazipur</p>
+                <p><strong>{t("licenseNumber")}:</strong> 33-30-1-002-00448</p>
+                <p><strong>{t("issuedDate")}:</strong> September 22, 2025</p>
+                <p><strong>{t("validUntil")}:</strong> September 21, 2026</p>
+                <p><strong>{t("issuingAuthority")}:</strong> Department of Inspection for Factories and Establishments, Gazipur</p>
               </div>
             </div>
           </div>
@@ -140,23 +139,23 @@ export default function AboutPage() {
       {/* Building Layout Section */}
       <section className="py-20 bg-light-gray">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">Factory Layout</h2>
+          <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">{t("factoryLayout")}</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-2xl font-semibold mb-6 text-deep-navy">Our Facility</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-deep-navy">{t("ourFacility")}</h3>
               <div className="space-y-4 text-gray-700">
                 <div className="flex items-start gap-3">
                   <div className="w-3 h-3 bg-teal rounded-full mt-2 flex-shrink-0"></div>
                   <div>
-                    <h4 className="font-semibold">Ground Floor - Cutting Department</h4>
-                    <p>Advanced cutting machines and fabric inspection area</p>
+                    <h4 className="font-semibold">{t("groundFloorCuttingDepartment")}</h4>
+                    <p>{t("cuttingDepartmentDescription")}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-3 h-3 bg-teal rounded-full mt-2 flex-shrink-0"></div>
                   <div>
-                    <h4 className="font-semibold">1st Floor - Sewing Department</h4>
-                    <p>200+ sewing machines with quality control stations</p>
+                    <h4 className="font-semibold">{t("firstFloorSewingDepartment")}</h4>
+                    <p>{t("sewingDepartmentDescription")}</p>
                   </div>
                 </div>
               </div>
@@ -178,14 +177,14 @@ export default function AboutPage() {
       {/* Equipment Information Section */}
       <section className="py-20 bg-white">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">Equipment & Technology</h2>
+          <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">{t("equipmentTechnology")}</h2>
           {/* Cutting Section */}
           <section className="py-20 bg-light-gray">
             <div className="mx-auto max-w-6xl px-4">
-              <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">Cutting Section</h2>
+              <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">{t("cuttingSection")}</h2>
               {/* JINDEX X7 */}
               <div className="w-full px-4 mb-12">
-                <h3 className="text-2xl font-bold text-center text-deep-navy mb-8">Jindex X7: High-Precision CNC Cutting Machine</h3>
+                <h3 className="text-2xl font-bold text-center text-deep-navy mb-8">{t("jindexX7HighPrecisionCNCCuttingMachine")}</h3>
                 <div className="flex flex-col gap-12 lg:flex-row items-center">
                   <div className="lg:w-1/2">
                     <Image
@@ -199,13 +198,13 @@ export default function AboutPage() {
                   </div>
                   <div className="lg:w-1/2">
                     <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                      At Stitch Made BD, we pride ourselves on leveraging cutting-edge technology to achieve unparalleled precision and efficiency. Our flagship Jindex X7 high-precision multi-function CNC cutting machine is a testament to this commitment. Engineered for mass production, it serves diverse sectors. This advanced system masterfully handles soft materials, consistently achieving a remarkable 7 cm cutting thickness after adsorption. It stands out with exceptional cutting speed, industry-leading accuracy, and intelligent, energy-efficient operations, underscoring our dedication to innovative and sustainable manufacturing.
+                      {t("jindexX7Description")}
                     </p>
-                    <h4 className="text-xl font-semibold mb-3 text-deep-navy">Key Specifications:</h4>
+                    <h4 className="text-xl font-semibold mb-3 text-deep-navy">{t("keySpecifications")}:</h4>
                     <ul className="space-y-2 text-gray-700">
-                      <li>• Max cutting speed: 80 meters / minute</li>
-                      <li>• Cutting accuracy: +/- 1mm</li>
-                      <li>• Cutting style: Vibrating knife tool at 5000 rpm</li>
+                      <li>• {t("maxCuttingSpeed")}</li>
+                      <li>• {t("cuttingAccuracy")}</li>
+                      <li>• {t("cuttingStyle")}</li>
                     </ul>
                   </div>
                 </div>
@@ -216,7 +215,7 @@ export default function AboutPage() {
           {/* Sewing Machines Section */}
           <section className="py-20 bg-white">
             <div className="mx-auto max-w-6xl px-4">
-              <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">Sewing Machines
+              <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">{t("sewingMachines")}
               </h2>
               <Swiper
                 spaceBetween={30}
@@ -262,38 +261,38 @@ export default function AboutPage() {
           {/* Finishing Section */}
           <section className="py-20 bg-light-gray">
             <div className="mx-auto max-w-6xl px-4">
-              <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">Finishing Section</h2>
+              <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">{t("finishingSection")}</h2>
               <div className="bg-light-gray p-6 rounded-lg">
                 <div className="text-4xl mb-4">🔧</div>
-                <h3 className="text-xl font-semibold mb-3 text-deep-navy">Finishing Equipment</h3>
+                <h3 className="text-xl font-semibold mb-3 text-deep-navy">{t("finishingEquipment")}</h3>
                 <ul className="space-y-2 text-gray-700">
-                  <li>Industrial steam irons</li>
-                  <li>Quality inspection stations</li>
-                  <li>Packaging machines</li>
-                  <li>Labeling systems</li>
+                  <li>{t("industrialSteamIrons")}</li>
+                  <li>{t("qualityInspectionStations")}</li>
+                  <li>{t("packagingMachines")}</li>
+                  <li>{t("labelingSystems")}</li>
                 </ul>
               </div>
             </div>
           </section>
 
           <div className="mt-12 bg-deep-navy text-white p-8 rounded-lg">
-            <h3 className="text-2xl font-semibold mb-4 text-center">Production Capacity</h3>
+            <h3 className="text-2xl font-semibold mb-4 text-center">{t("productionCapacity")}</h3>
             <div className="grid md:grid-cols-4 gap-6 text-center">
               <div>
                 <div className="text-3xl font-bold text-teal">50,000+</div>
-                <div className="text-sm opacity-80">Pieces per month</div>
+                <div className="text-sm opacity-80">{t("piecesPerMonth")}</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-teal">200+</div>
-                <div className="text-sm opacity-80">Sewing machines</div>
+                <div className="text-sm opacity-80">{t("sewingMachinesCount")}</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-teal">250+</div>
-                <div className="text-sm opacity-80">Skilled workers</div>
+                <div className="text-sm opacity-80">{t("skilledWorkers")}</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-teal">99%</div>
-                <div className="text-sm opacity-80">QC Pass</div>
+                <div className="text-sm opacity-80">{t("qcPass")}</div>
               </div>
             </div>
           </div>

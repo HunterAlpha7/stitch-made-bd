@@ -18,15 +18,15 @@ export default function LanguageSwitcher() {
         <span className="text-lg">🇬🇧</span>
       </button>
       <button
-        onClick={() => switchLanguage("bn")}
+        onClick={() => switchLanguage("ja")}
         className={`h-9 w-12 rounded border-2 transition-all ${
-          language === "bn"
+          language === "ja"
             ? "border-white bg-white/20"
             : "border-white/30 hover:border-white/50"
         }`}
-        aria-label="Switch to Bengali"
+        aria-label="Switch to Japanese"
       >
-        <span className="text-lg">🇧🇩</span>
+        <span className="text-lg">🇯🇵</span>
       </button>
     </div>
   );

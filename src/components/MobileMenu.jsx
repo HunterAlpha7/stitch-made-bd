@@ -2,10 +2,12 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-// import LanguageSwitcher from './LanguageSwitcher'; // Removed as per user request
+import LanguageSwitcher from './LanguageSwitcher';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useLanguage();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -63,24 +65,24 @@ export default function MobileMenu() {
         </div>
         <nav className="flex flex-col gap-4 p-4 text-white">
           <Link href="/" className="hover:opacity-90" onClick={toggleMenu}>
-            Home
+            {t("home")}
           </Link>
           <Link href="/about" className="hover:opacity-90" onClick={toggleMenu}>
-            About
+            {t("about")}
           </Link>
           <Link href="/gallery" className="hover:opacity-90" onClick={toggleMenu}>
-            Gallery
+            {t("gallery")}
           </Link>
           <Link href="/products" className="hover:opacity-90" onClick={toggleMenu}>
-            Products
+            {t("products")}
           </Link>
           <Link href="/contact" className="hover:opacity-90" onClick={toggleMenu}>
-            Contact
+            {t("contact")}
           </Link>
         </nav>
-        {/* <div className="absolute bottom-4 left-4">
+        <div className="absolute bottom-4 left-4">
           <LanguageSwitcher />
-        </div> */} {/* Commented out to remove language functionality */}
+        </div>
       </div>
       {isOpen && (
         <div

@@ -6,11 +6,17 @@ const LanguageContext = createContext();
 
 const translations = {
   en: require('../translations/en.json'),
-  bn: require('../translations/bn.json'),
+  ja: require('../translations/ja.json'),
 };
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState('en'); // Default language
+  const [language, setLanguage] = useState(() => {
+    // Get language from localStorage or default to 'en'
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('language') || 'en';
+    }
+    return 'en';
+  });
   const [t, setT] = useState(() => (key) => key); // Default t function
 
   useEffect(() => {
@@ -19,6 +25,10 @@ export const LanguageProvider = ({ children }) => {
 
   const switchLanguage = (lang) => {
     setLanguage(lang);
+    // Save to localStorage
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('language', lang);
+    }
   };
 
   return (
