@@ -2,13 +2,12 @@
 
 import { useLanguage } from '../../contexts/LanguageContext';
 
-const MAP_LOCATION_QUERY = "Stitch Made Ltd (SML)";
-const MAP_PLACE_LABEL = "Holding # 72/3, Block #3, Bahadurpur, Bhawal Mirzapur, Gazipur City, Gazipur - 1703";
-
 export default function ContactPage() {
   const { t } = useLanguage();
   const googleMapsApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
-  const encodedLocation = encodeURIComponent(MAP_LOCATION_QUERY);
+  const mapLocationQuery = process.env.NEXT_PUBLIC_MAP_LOCATION_QUERY || "Stitch Made Ltd (SML)";
+  const mapPlaceLabel = process.env.NEXT_PUBLIC_MAP_PLACE_LABEL || "Holding # 72/3, Block #3, Bahadurpur, Bhawal Mirzapur, Gazipur City, Gazipur - 1703";
+  const encodedLocation = encodeURIComponent(mapLocationQuery);
   const mapSrc = googleMapsApiKey
     ? `https://www.google.com/maps/embed/v1/place?key=${googleMapsApiKey}&q=${encodedLocation}&zoom=15`
     : null;
@@ -92,7 +91,7 @@ export default function ContactPage() {
                       <div className="text-6xl mb-4">🗺️</div>
                       <p className="text-gray-600">{t("mapPreviewUnavailable")}</p>
                       <p className="text-sm text-gray-500 mt-2">{t("addGoogleMapsApiKey")}</p>
-                      <p className="text-sm text-gray-500 mt-2">{MAP_PLACE_LABEL}</p>
+                      <p className="text-sm text-gray-500 mt-2">{mapPlaceLabel}</p>
                     </div>
                   </div>
                 )}
