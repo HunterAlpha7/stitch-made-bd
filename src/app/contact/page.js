@@ -50,7 +50,6 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-semibold text-deep-navy mb-1">{t("emailUs")}</h4>
                     <p className="text-gray-600">info@stitchmadebd.com</p>
-                    <p className="text-gray-600">sales@stitchmadebd.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -59,7 +58,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-deep-navy mb-1">{t("callUs")}</h4>
-                    <p className="text-gray-600">+880 1678 306 200</p>                 
+                    <p className="text-gray-600">+880 1678 306 036</p>                 
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
