@@ -77,7 +77,7 @@
   "emailUs": "メール",
   "callUs": "電話",
   "businessHours": "営業時間",
-  "saturdayThursday": "土曜日 - 木曜日: 午前9時 - 午後5時",
+  "saturdayThursday": "土曜日 - 木曜日: 午前8時 - 午後5時",
   "friday": "金曜日: 休業",
   "findUsOnTheMap": "地図で見つける",
   "mapPreviewUnavailable": "地図プレビューは利用できません。",
@@ -91,4 +91,3 @@
   "plainMachine": "平縫い機",
   "kids": "キッズ"
 }
-

@@ -7,6 +7,8 @@ export default function ProductSection({ title, category }) {
   const [images, setImages] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const autoRotateIntervalRef = useRef(null);
 
   const itemsPerPage = 4; // 4 columns
@@ -36,7 +38,7 @@ export default function ProductSection({ title, category }) {
         const maxIndex = Math.max(0, Math.ceil(images.length / itemsPerPage) - 1);
         return (prevIndex + 1) % (maxIndex + 1);
       });
-    }, 3000); // Auto-rotate every 3 seconds
+    }, 5000); // Auto-rotate every 5 seconds
 
     return () => {
       if (autoRotateIntervalRef.current) {
@@ -59,7 +61,7 @@ export default function ProductSection({ title, category }) {
           const maxIdx = Math.max(0, Math.ceil(images.length / itemsPerPage) - 1);
           return (prevIndex + 1) % (maxIdx + 1);
         });
-      }, 3000);
+      }, 5000);
     }
   };
 
@@ -73,8 +75,18 @@ export default function ProductSection({ title, category }) {
           const maxIdx = Math.max(0, Math.ceil(images.length / itemsPerPage) - 1);
           return (prevIndex + 1) % (maxIdx + 1);
         });
-      }, 3000);
+      }, 5000);
     }
+  };
+
+  const handleImageClick = (filename) => {
+    setSelectedImage(filename);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage(null);
   };
 
   if (loading) {
@@ -151,7 +163,8 @@ export default function ProductSection({ title, category }) {
           {visibleImages.map((filename, index) => (
             <div
               key={`${filename}-${startIndex + index}`}
-              className="relative w-full aspect-[4/3] overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 group"
+              className="relative w-full aspect-[4/3] overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 group cursor-pointer"
+              onClick={() => handleImageClick(filename)}
             >
               <Image
                 src={`/products/${category}/${filename}`}
@@ -176,17 +189,35 @@ export default function ProductSection({ title, category }) {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                  index === currentIndex
-                    ? "bg-gray-800 w-8"
-                    : "bg-gray-300 hover:bg-gray-400"
-                }`}
+                className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentIndex
+                  ? "bg-gray-800 w-8"
+                  : "bg-gray-300 hover:bg-gray-400"
+                  }`}
                 aria-label={`Go to page ${index + 1}`}
               />
             ))}
           </div>
         )}
       </div>
+
+      {/* Image Modal */}
+      {isModalOpen && selectedImage && (
+        <div className="fixed inset-0 bg-transparent backdrop-blur-sm flex items-center justify-center z-50 p-4"
+          onClick={closeModal}>
+          <div className="relative p-2 rounded-lg max-w-3xl max-h-full overflow-auto"
+            onClick={(e) => e.stopPropagation()}>
+            <button onClick={closeModal} className="absolute top-2 right-2 text-white w-10 h-10 flex items-center justify-center text-2xl font-bold transition-colors duration-200" style={{ textShadow: '1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black' }}>×</button>
+            <Image
+              src={`/products/${category}/${selectedImage}`}
+              alt="Enlarged product image"
+              width={900}
+              height={600}
+              objectFit="contain"
+              className="rounded-lg"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }
