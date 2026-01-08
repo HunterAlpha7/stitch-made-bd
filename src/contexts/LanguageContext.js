@@ -9,15 +9,10 @@ const translations = {
   ja: require('../translations/ja.json'),
 };
 
-export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState(() => {
-    // Get language from localStorage or default to 'en'
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('language') || 'en';
-    }
-    return 'en';
-  });
-  const [t, setT] = useState(() => (key) => key); // Default t function
+export const LanguageProvider = ({ children, initialLanguage = 'en' }) => {
+  const [language, setLanguage] = useState(initialLanguage);
+  // Initialize t function immediately with the resolved initial language to prevent flash
+  const [t, setT] = useState(() => (key) => translations[initialLanguage][key] || key);
 
   useEffect(() => {
     setT(() => (key) => translations[language][key] || key);
@@ -25,10 +20,8 @@ export const LanguageProvider = ({ children }) => {
 
   const switchLanguage = (lang) => {
     setLanguage(lang);
-    // Save to localStorage
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('language', lang);
-    }
+    // Save to Cookies for server-side persistence
+    document.cookie = `language=${lang}; path=/; max-age=31536000; SameSite=Lax`;
   };
 
   return (
