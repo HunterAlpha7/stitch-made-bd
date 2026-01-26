@@ -10,7 +10,7 @@ function ImageCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [
     // '/factory_images/factory1.jpg',
-    '/factory_images/factory2.jpg', 
+    '/factory_images/factory2.jpg',
     '/factory_images/factory3.jpg',
     '/factory_images/factory4.jpg',
     '/factory_images/factory5.jpg',
@@ -34,11 +34,10 @@ function ImageCarousel() {
       {images.map((image, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentIndex ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ${index === currentIndex ? 'opacity-100' : 'opacity-0'
+            }`}
         >
-          <div 
+          <div
             className="w-full h-full bg-gradient-to-r from-teal/80 to-deep-navy/80"
             style={{
               backgroundImage: `url(${image})`,
@@ -90,7 +89,7 @@ function CountAnimation({ end, duration = 2000, suffix = '' }) {
     const animate = (currentTime) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
-      
+
       setCount(Math.floor(progress * end));
 
       if (progress < 1) {
@@ -115,7 +114,7 @@ function ProductCard({ image, title, href }) {
   return (
     <Link href={href} className="group block">
       <div className="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300">
-        <div 
+        <div
           className="h-96 w-64 bg-gradient-to-br from-teal/20 to-deep-navy/20"
           style={{
             backgroundImage: `url(${image})`,
@@ -137,21 +136,31 @@ function ProductCard({ image, title, href }) {
 
 // Buyer Logo Component
 function BuyerLogo({ logo, name, website }) {
+  const hasLogo = logo && logo !== '/' && !logo.includes('undefined');
+
   return (
-    <a 
-      href={website} 
-      target="_blank" 
+    <a
+      href={website}
+      target="_blank"
       rel="noopener noreferrer"
-      className="block p-6 bg-gray-200 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110"
+      className="group block h-full min-h-[160px] bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden border border-gray-100"
     >
-      <div className="w-24 h-24 mx-auto bg-light-gray rounded-lg flex items-center justify-center">
-        {logo ? (
-          <Image src={logo} alt={name} width={96} height={96} className="max-w-full max-h-full object-contain" />
+      <div className="absolute inset-0 flex items-center justify-center p-6">
+        {hasLogo ? (
+          <div className="w-full h-full flex flex-col items-center justify-center gap-4">
+            <div className="relative w-full h-20 flex items-center justify-center">
+              <Image src={logo} alt={name} width={150} height={80} className="object-contain max-w-full max-h-full opacity-90 group-hover:opacity-110 transition-opacity" />
+            </div>
+            <p className="text-sm font-medium text-gray-500 group-hover:text-teal transition-colors">{name}</p>
+          </div>
         ) : (
-          <span className="text-2xl font-bold text-deep-navy">{name}</span>
+          <div className="w-full h-full flex items-center justify-center">
+            <span className="text-2xl font-bold text-gray-600 group-hover:text-teal transition-colors duration-300 tracking-wider text-center">
+              {name}
+            </span>
+          </div>
         )}
       </div>
-      <p className="text-center mt-3 text-sm text-gray-600">{name}</p>
     </a>
   );
 }
@@ -207,34 +216,34 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-3xl font-bold text-center text-deep-navy mb-12">{t("ourProducts")}</h2>
           <div className="grid gap-8 justify-items-center md:grid-cols-3 md:grid-rows-2 md:grid-flow-col">
-            <ProductCard 
+            <ProductCard
               image="/Workwear.jpg"
               title={t("workwear")}
               href="/products"
             />
-            <ProductCard 
+            <ProductCard
               image="/mens_bottom.png"
               title={t("mensBottom")}
               href="/products"
-            />            
-            <ProductCard 
+            />
+            <ProductCard
               image="/kids.jpg"
               title={t("kidsItem")}
               href="/products"
             />
-            <ProductCard 
+            <ProductCard
               image=""
               title=""
               href="#"
             />
-            <ProductCard 
+            <ProductCard
               image="/ladies_top.jpg"
               title={t("ladiesTop")}
               href="/products"
             />
-            
-            
-            <ProductCard 
+
+
+            <ProductCard
               image="/ladies_bottom.png"
               title={t("ladiesBottom")}
               href="/products"
@@ -262,22 +271,22 @@ export default function Home() {
                 website="https://www.takihyo.co.jp/en/"
               />
               <BuyerLogo
-                logo="/tawaraya-logo.png"
+                logo={null}
                 name="Tawaraya"
                 website="#"
               />
               <BuyerLogo
-                logo="/"
-                name="Yamaichi"
+                logo={null}
+                name="Tamaichi"
                 website="#"
               />
-              
+
               <BuyerLogo
-                logo="/"
+                logo={null}
                 name="Yamanishi"
                 website="#"
               />
-              
+
             </div>
             <div className="flex-shrink-0 grid grid-cols-1 gap-8">
               <BuyerLogo
@@ -285,7 +294,7 @@ export default function Home() {
                 name="Shinmen"
               />
               <BuyerLogo
-                logo="/logos/sowa-logo.png"
+                logo={null}
                 name="SOWA"
                 website="#"
               />
@@ -305,7 +314,7 @@ export default function Home() {
             {t("getInTouch")}
           </Link>
         </div>
-    </section>
+      </section>
     </div>
   );
 }

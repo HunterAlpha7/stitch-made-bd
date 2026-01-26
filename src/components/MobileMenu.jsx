@@ -15,7 +15,7 @@ export default function MobileMenu() {
 
   return (
     <div className="md:hidden">
-      <button onClick={toggleMenu} className="text-white focus:outline-none">
+      <button onClick={toggleMenu} className="text-deep-navy focus:outline-none">
         <svg
           className="h-6 w-6"
           fill="none"
@@ -42,9 +42,8 @@ export default function MobileMenu() {
 
       {/* Off-canvas menu */}
       <div
-        className={`${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        } fixed right-0 top-0 z-50 h-full w-64 transform bg-deep-navy transition-transform duration-300 ease-in-out`}
+        className={`${isOpen ? 'translate-x-0' : 'translate-x-full'
+          } fixed right-0 top-0 z-50 h-full w-64 transform bg-deep-navy transition-transform duration-300 ease-in-out`}
       >
         <div className="flex justify-end p-4">
           <button onClick={toggleMenu} className="text-white focus:outline-none">

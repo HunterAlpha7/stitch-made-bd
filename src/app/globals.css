@@ -37,12 +37,29 @@ body {
 }
 
 /* Utility colors */
-.text-deep-navy { color: var(--deep-navy); }
-.bg-deep-navy { background-color: var(--deep-navy); }
-.text-teal { color: var(--primary-teal); }
-.hover-teal:hover { color: var(--primary-teal); }
-.border-muted { border-color: color-mix(in oklab, var(--deep-navy) 10%, transparent); }
-.bg-teal { background-color: var(--primary-teal); }
+.text-deep-navy {
+  color: var(--deep-navy);
+}
+
+.bg-deep-navy {
+  background-color: var(--deep-navy);
+}
+
+.text-teal {
+  color: var(--primary-teal);
+}
+
+.hover-teal:hover {
+  color: var(--primary-teal);
+}
+
+.border-muted {
+  border-color: color-mix(in oklab, var(--deep-navy) 10%, transparent);
+}
+
+.bg-teal {
+  background-color: var(--primary-teal);
+}
 
 /* Swiper custom styles */
 .swiper {
@@ -59,14 +76,17 @@ body {
 }
 
 .swiper-pagination-bullet {
-  background-color: #004a4c !important; /* Deep navy */
+  background-color: #004a4c !important;
+  /* Deep navy */
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #008080 !important; /* Teal */
+  background-color: #008080 !important;
+  /* Teal */
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: #004a4c !important; /* Deep navy */
+  color: #004a4c !important;
+  /* Deep navy */
 }

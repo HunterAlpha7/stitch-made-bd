@@ -13,7 +13,7 @@ export default function Logo({ className = "" }) {
     return (
         <div className={`relative h-10 w-auto aspect-[3/1] ${className}`}>
             <Image
-                src="/logo.svg"
+                src="/logo.png"
                 alt="Stitch Made Limited"
                 fill
                 className="object-contain object-left"

@@ -9,8 +9,8 @@ import Logo from "./Logo";
 export default function Header() {
   const { t } = useLanguage();
   return (
-    <header className="sticky top-0 z-40 bg-teal border-b border-black/5">
-      <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between text-white">
+    <header className="sticky top-0 z-40 bg-white border-b border-black/5">
+      <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between text-deep-navy">
         <Link href="/" className="hover:opacity-90">
           <Logo />
         </Link>
