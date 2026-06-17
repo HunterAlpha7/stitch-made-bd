@@ -75,6 +75,9 @@ export default function MobileMenu() {
           <Link href="/products" className="hover:opacity-90" onClick={toggleMenu}>
             {t("products")}
           </Link>
+          <Link href="/infrastructure" className="hover:opacity-90" onClick={toggleMenu}>
+            {t("infrastructure")}
+          </Link>
           <Link href="/contact" className="hover:opacity-90" onClick={toggleMenu}>
             {t("contact")}
           </Link>

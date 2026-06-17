@@ -19,6 +19,7 @@ export default function Header() {
           <Link href="/about" className="hover:opacity-90">{t("about")}</Link>
           <Link href="/gallery" className="hover:opacity-90">{t("gallery")}</Link>
           <Link href="/products" className="hover:opacity-90">{t("products")}</Link>
+          <Link href="/infrastructure" className="hover:opacity-90">{t("infrastructure")}</Link>
           <Link href="/contact" className="hover:opacity-90">{t("contact")}</Link>
         </nav>
         <div className="md:flex items-center gap-3">
